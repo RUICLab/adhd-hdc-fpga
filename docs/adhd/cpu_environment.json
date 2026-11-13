@@ -1,0 +1,20 @@
+{
+  "cpu": "Intel Core i7-13700F",
+  "os": "Windows",
+  "threads": 1,
+  "affinity_logical_cpu": 0,
+  "compiler": "MinGW-w64 GCC 9.5.0",
+  "flags": "-O3 -march=native -std=c++17 -static-libgcc -static-libstdc++",
+  "D": 8192,
+  "features": 196,
+  "classes": 10,
+  "inputs": 64,
+  "batches": 9,
+  "inferences_per_batch": 256,
+  "timing": "steady_clock wall time; warm caches; model resident; median batch average",
+  "clock_control": "OS-managed; no fixed CPU frequency or turbo control",
+  "power": "not measured; base-power or TDP ratings are not workload power",
+  "workload": "deterministic synthetic levels/prototypes/images/filters/thresholds; not trained accuracy",
+  "fpga_comparison": "OOC cycle-derived 82.07 us at constrained 100 MHz, not measured board latency",
+  "frontend_bounds": "CPU timings exclude sensor digitization, transfer and host orchestration"
+}

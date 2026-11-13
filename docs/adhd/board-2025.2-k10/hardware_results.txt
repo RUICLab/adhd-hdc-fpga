@@ -1,0 +1,7 @@
+Vivado=2025.2 classes=10 device=xc7z020_1 target=localhost:3121/xilinx_tcf/Xilinx/<adapter>
+BOARD PASS run=0 K=10 status=adcd03f9 errors=0 checked=32768 cycles=8207 results=00002000 00061063 0008105c 00092000
+BOARD PASS run=1 K=10 status=adcd03f9 errors=0 checked=32768 cycles=8207 results=00002000 00061063 0008105c 00092000
+BOARD PASS run=2 K=10 status=adcd03f9 errors=0 checked=32768 cycles=8207 results=00002000 00061063 0008105c 00092000
+BOARD PASS run=3 K=10 status=adcd03f9 errors=0 checked=32768 cycles=8207 results=00002000 00061063 0008105c 00092000
+BOARD PASS run=4 K=10 status=adcd03f9 errors=0 checked=32768 cycles=8207 results=00002000 00061063 0008105c 00092000
+ADHD HARDWARE PASS: 5 reset/load/infer batches, 20 inferences, 163840 query-bit comparisons

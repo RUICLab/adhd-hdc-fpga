@@ -1,0 +1,41 @@
+{
+  "rtl_sha256": "2237ee4d5e81156b1b24f40975ba120e6946fe8545eb539a5a8a5975a48c8b10",
+  "results": [
+    {
+      "classes": 10,
+      "luts": 1387,
+      "flip_flops": 1317,
+      "bram36_tiles": 3.5,
+      "dsps": 0,
+      "cycles": 8207,
+      "setup_slack_ns": 1.378,
+      "hold_slack_ns": 0.016,
+      "clock_mhz": 100,
+      "dynamic_power_w_rounded": 0.04,
+      "device_static_w_rounded": 0.103,
+      "total_chip_power_w_rounded": 0.143,
+      "latency_us": 82.07,
+      "dynamic_energy_nj_approx": 3282.7999999999997,
+      "allocated_chip_energy_nj_approx": 11736.009999999998,
+      "saif_match": "63%   (1969/3131)"
+    },
+    {
+      "classes": 26,
+      "luts": 1491,
+      "flip_flops": 1589,
+      "bram36_tiles": 7.5,
+      "dsps": 0,
+      "cycles": 8223,
+      "setup_slack_ns": 1.372,
+      "hold_slack_ns": 0.012,
+      "clock_mhz": 100,
+      "dynamic_power_w_rounded": 0.051,
+      "device_static_w_rounded": 0.104,
+      "total_chip_power_w_rounded": 0.154,
+      "latency_us": 82.23,
+      "dynamic_energy_nj_approx": 4193.73,
+      "allocated_chip_energy_nj_approx": 12663.42,
+      "saif_match": "60%   (2274/3811)"
+    }
+  ]
+}

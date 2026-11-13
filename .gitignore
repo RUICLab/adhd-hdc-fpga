@@ -1,0 +1,21 @@
+build/
+__pycache__/
+*.py[cod]
+*.log
+*.jou
+*.wdb
+*.dcp
+*.bit
+*.saif
+xsim.dir/
+.Xil/
+dfx_runtime.txt
+.env
+.env.*
+# Manuscript assets stay local.
+paper/
+*.tex
+*.bib
+*.pdf
+docs/ADHD_STATUS.md
+docs/adhd/RESULTS.md

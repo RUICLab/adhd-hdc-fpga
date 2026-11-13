@@ -1,0 +1,89 @@
+{
+  "tool": "Vivado/XSim 2025.2 SW build 6299465",
+  "board_target": "localhost:3121/xilinx_tcf/Xilinx/<adapter>",
+  "part": "xc7z020clg400-1",
+  "requested_core_clock_mhz": 100,
+  "scope": "Physical FPGA synthetic ROM fixtures, JTAG restart/readback; no trained accuracy or measured power",
+  "configurations": {
+    "10": {
+      "bitstream_sha256": "b7778aa86ba2ddf96dcc260c6f002cc4ab847e207bde23e83dd273e3fa75493b",
+      "probes_sha256": "226c7009d2fbbf70c5ec02d6238ce938dc54cbfebdee6053d04fe3ffe6cb7db0",
+      "fixture_sha256": {
+        "board_expected.hex": "c0fc1a29de24a84840944c49451aee09227c789a88f2e673e17d6280b57492b1",
+        "board_features.hex": "32941ca39aee3bba18a7a8b704b5bdb09cb22f17fa085d0aa56984466440b0ed",
+        "board_model.hex": "d5f70f2ab6715ec939a008c8848a31bb26d311054befec1f188eba023703421a",
+        "board_query.hex": "87de3fd04aad8ef80c584562ab74cea8d8484ad9fd947e0e5822264b49ed4bdd"
+      },
+      "hardware_batches": 5,
+      "hardware_inferences": 20,
+      "hardware_query_comparisons": 163840,
+      "hardware_errors": 0,
+      "core_cycles": 8207,
+      "core_time_us_from_cycles_at_requested_clock": 82.07,
+      "timing": [
+        "classes=10",
+        "part=xc7z020clg400-1",
+        "clock_mhz=100",
+        "setup_slack_ns=1.566",
+        "hold_slack_ns=0.045"
+      ]
+    },
+    "26": {
+      "bitstream_sha256": "cd486b0d55f449c662f04102824739dbf08074402194c998a5724933627a8a4c",
+      "probes_sha256": "226c7009d2fbbf70c5ec02d6238ce938dc54cbfebdee6053d04fe3ffe6cb7db0",
+      "fixture_sha256": {
+        "board_expected.hex": "7ac4820306429b61682181b6f46721f1a1c7ffe4884b9c362e3db7647fe472c6",
+        "board_features.hex": "9d2727b25374edc7d2a6c17c721b2797eee1d529dd7ce74cc7b4bd21594b8bd3",
+        "board_model.hex": "b08c50e9c6e54894710b115f3d3f5122c0ccf7889b18f81293005400dc1c69a1",
+        "board_query.hex": "faea83bc9647ff799bb9b87428961ea1cf3b435cacc198a43b48de131cfb6816"
+      },
+      "hardware_batches": 5,
+      "hardware_inferences": 20,
+      "hardware_query_comparisons": 163840,
+      "hardware_errors": 0,
+      "core_cycles": 8223,
+      "core_time_us_from_cycles_at_requested_clock": 82.23,
+      "timing": [
+        "classes=26",
+        "part=xc7z020clg400-1",
+        "clock_mhz=100",
+        "setup_slack_ns=1.421",
+        "hold_slack_ns=0.032"
+      ]
+    }
+  },
+  "capture_source_sha256": {
+    "hw/adhd/adhd_hdc.sv": "f769365d532712f79f5fade019ac2e43c97b08afc8791159ec577caa8af4bff1",
+    "hw/adhd/adhd_board_test.sv": "ace24483c5f602b7194283f723220122d8ab36649386798950dd956ada9538a2",
+    "hw/adhd/adhd_board_top.sv": "0d13cd7e5f9ffa6c73503b38ed27411e508b9ccf78a4fa2ef9c4333f6eeb3800",
+    "hw/adhd/pynq_z2_board.xdc": "c9ce4f2bf88a15c418cdf957be965293c9fca2d9864fb94eced6752d0f0878e1",
+    "scripts/adhd_board_audit.tcl": "b5c0769fe619ab52fb834fd48430f5998f4805e869bddb1a035915b28eac2390",
+    "scripts/adhd_board_build.tcl": "24b7890305444d71771d752a22f6807cf6e0adb732bb8c7327df6ec063da4f76",
+    "scripts/adhd_board_collect.py": "5dae3e00da4b97dfb22a86ee8934e9b56716392d2ceed0fc062ea0ffb84fad47",
+    "scripts/adhd_board_prepare.py": "bc74e73c6b0aeada55f5ecdf9861175cb835fd9f1cc4fa86955078a4447b163b",
+    "scripts/adhd_board_run.tcl": "ae738897d32edb1a27125b00f9a449fc01448a442dde0128d880756b4d24298e",
+    "scripts/adhd_board_verify.py": "29e20e8286707737f39ca5a3ec09f75030a16c1d3599f3261b2fcfcabee06605",
+    "sim/adhd/tb_board.sv": "d3f6a8ad9f64bd176642d63308365dd09394b3b5059714ed3d757a16ca1cd1b5",
+    "scripts/adhd_verify.py": "4711d6751b1aa9f548166d0401dc09f76c6b6a36d11aea7b03dc643b041ed2f7"
+  },
+  "release_note": "Physical results captured before public release. RTL and fixture-controller bytes are unchanged; public scripts select the local JTAG adapter and require an explicit Vivado root. Machine identifiers/workspace paths in evidence are redacted.",
+  "release_source_sha256": {
+    "hw/adhd/adhd_board_test.sv": "ace24483c5f602b7194283f723220122d8ab36649386798950dd956ada9538a2",
+    "hw/adhd/adhd_board_top.sv": "0d13cd7e5f9ffa6c73503b38ed27411e508b9ccf78a4fa2ef9c4333f6eeb3800",
+    "hw/adhd/adhd_hdc.sv": "f769365d532712f79f5fade019ac2e43c97b08afc8791159ec577caa8af4bff1",
+    "hw/adhd/pynq_z2_board.xdc": "c9ce4f2bf88a15c418cdf957be965293c9fca2d9864fb94eced6752d0f0878e1",
+    "sim/adhd/tb_adhd.sv": "9b29b0a6fdce4d48e7832e65f93de1e8362c753cc4b15be3e0844235a3401368",
+    "sim/adhd/tb_board.sv": "d3f6a8ad9f64bd176642d63308365dd09394b3b5059714ed3d757a16ca1cd1b5",
+    "scripts/adhd_board_audit.tcl": "b5c0769fe619ab52fb834fd48430f5998f4805e869bddb1a035915b28eac2390",
+    "scripts/adhd_board_build.tcl": "24b7890305444d71771d752a22f6807cf6e0adb732bb8c7327df6ec063da4f76",
+    "scripts/adhd_board_collect.py": "b5def519e10ed8ca2274c7f9d8d3d0e11110afe5b76c748cbf6176021087570a",
+    "scripts/adhd_board_prepare.py": "bc74e73c6b0aeada55f5ecdf9861175cb835fd9f1cc4fa86955078a4447b163b",
+    "scripts/adhd_board_run.tcl": "a458993ad5e09752f2d79df76e481d9edf1854014988107fb555fa44102f7111",
+    "scripts/adhd_board_verify.py": "29e20e8286707737f39ca5a3ec09f75030a16c1d3599f3261b2fcfcabee06605",
+    "scripts/adhd_power.tcl": "ddcaec56a248492c8cb02cb07299bd2e2e419fd2da3daf58738c5e6c8e26a6d8",
+    "scripts/adhd_report.py": "a6f55ab24742d13d37440f10864a2ac486d265219ed3a72aba55bc88e807859c",
+    "scripts/adhd_synth.tcl": "1d55fca4e007bfaa143909fe3b4c04f9af3a41e2dfdf6c7d3f09a63df6d8f31a",
+    "scripts/adhd_verify.py": "521661a7d0b27f50e663f251dff8f69d72652b6adb188925a32a323dd2f0d96b",
+    "bench/hdc_cpu.cpp": "93de13aa5995344e9cc21478e3fe89d258b788e5639aa63d493a662acc42ff26"
+  }
+}

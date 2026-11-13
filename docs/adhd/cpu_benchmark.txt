@@ -1,0 +1,12 @@
+single_thread=1 affinity_logical_cpu0=1
+PASS: all three CPU algorithms match all query bits and class scores for four RTL test cases
+PASS: 64 additional random inputs, D=8192 N=196 K=10; warm-cache, model resident
+direct_parity median_us=913.6207 min_us=883.5371 max_us=1017.2047 trials_us=892.0027,883.5371,1017.2047,913.6207,906.7605,973.4969,898.9027,933.4289,922.6500, fpga_core_speedup=11.1322
+stored_hv_vectorized median_us=331.6680 min_us=327.8797 max_us=451.2207 trials_us=327.8797,372.0980,335.3609,330.5242,451.2207,328.7652,331.6680,328.1562,332.2598, fpga_core_speedup=4.0413
+exact_fwht median_us=88.3680 min_us=87.0121 max_us=105.9004 trials_us=93.5961,89.1844,87.0121,87.9844,88.2445,94.0687,105.9004,88.0430,88.3680, fpga_core_speedup=1.0767
+PASS: cropped convolution+pooling matches direct six-loop reference on 64 images
+regional_frontend median_us=0.1141 min_us=0.1137 max_us=0.1254 trials_us=0.1156,0.1141,0.1141,0.1145,0.1141,0.1137,0.1141,0.1199,0.1254,
+convolutional_frontend median_us=3.4598 min_us=3.3996 max_us=3.6777 trials_us=3.4840,3.4539,3.4652,3.4598,3.4027,3.4738,3.3996,3.4340,3.6777,
+regional_plus_fwht median_us=91.5238 min_us=88.6957 max_us=100.2285 trials_us=93.4703,90.0824,89.6270,88.6957,91.8090,91.5238,91.4258,99.7121,100.2285,
+convolutional_plus_fwht median_us=92.7148 min_us=91.4473 max_us=98.9234 trials_us=93.9008,92.3516,92.5105,91.4473,93.7199,92.7148,92.5133,98.9234,94.0074,
+checksum=14478740744627087586

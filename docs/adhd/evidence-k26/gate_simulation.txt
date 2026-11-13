@@ -1,0 +1,31 @@
+
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Thu Nov 12 21:14:30 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/adhd_test/xsim_script.tcl
+# xsim {adhd_test} -autoloadwcfg -tclbatch {capture.tcl}
+Time resolution is 1 ps
+source capture.tcl
+## run all
+CASE 0 PASS K=26 D=8192 cycles=8223 winner=0
+CASE 1 PASS K=26 D=8192 cycles=8223 winner=11
+$stop called at time : 416780 ns : File "<workspace>/sim/adhd/tb_adhd.sv" Line 53
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 214.059 ; gain = 0.035
+## open_saif inference.saif
+## log_saif [get_objects -r /tb_config/test/dut/*]
+## run all
+$stop called at time : 499020 ns : File "<workspace>/sim/adhd/tb_adhd.sv" Line 63
+## close_saif
+## run all
+CASE 2 PASS K=26 D=8192 cycles=8223 winner=16
+CASE 3 PASS K=26 D=8192 cycles=8223 winner=25
+ADHD PASS: all query bits, class scores, winners, reset/restart, busy guards, output backpressure
+$finish called at time : 665320 ns : File "<workspace>/sim/adhd/tb_adhd.sv" Line 85
+## quit
+INFO: xsimkernel Simulation Memory Usage: 38924 KB (Peak: 38924 KB), Simulation CPU Usage: 17374 ms
+INFO: [Common 17-206] Exiting xsim at Thu Nov 12 21:14:51 2026...

@@ -1,0 +1,11 @@
+Public release validation (Windows, Vivado/XSim 2025.2):
+K=10 core: four cases passed; every query bit, class score, winner and cycle count checked.
+K=26 core: four cases passed; every query bit, class score, winner and cycle count checked.
+K=10 board controller: two complete reset/reload batches passed simulation.
+K=26 board controller: two complete reset/reload batches passed simulation.
+C++17 CPU build: passed with the Vivado-bundled MinGW compiler.
+CPU consistency: all three algorithms matched the four RTL fixtures and 64 additional random inputs.
+CPU frontend: convolution/pooling matched the independent direct-loop reference on 64 synthetic images.
+Archived physical-board evidence: five hardware batches and 20 inferences per K; zero errors.
+RTL equivalence: removing only the added timescale header matches the archived core SHA256 exactly.
+Public release: no generated vendor IP, binaries, model/dataset files or prior Git history included.

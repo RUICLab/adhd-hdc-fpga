@@ -1,0 +1,6 @@
+classes=10
+part=xc7z020clg400-1
+period_ns=10.0
+setup_slack_ns=1.378
+hold_slack_ns=0.016
+cycles=8207

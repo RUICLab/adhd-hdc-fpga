@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Preserve tool-produced whitespace in raw evidence reports.
+docs/adhd/**/*.rpt -whitespace

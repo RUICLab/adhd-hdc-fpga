@@ -1,0 +1,5 @@
+classes=10
+part=xc7z020clg400-1
+clock_mhz=100
+setup_slack_ns=1.566
+hold_slack_ns=0.045

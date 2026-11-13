@@ -1,0 +1,21 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Nov 13 10:10:58 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/adhd_test/xsim_script.tcl
+# xsim {adhd_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+CASE 0 PASS K=26 D=8192 cycles=8223 winner=0
+CASE 1 PASS K=26 D=8192 cycles=8223 winner=11
+CASE 2 PASS K=26 D=8192 cycles=8223 winner=16
+CASE 3 PASS K=26 D=8192 cycles=8223 winner=25
+ADHD PASS: all query bits, class scores, winners, reset/restart, busy guards, output backpressure
+$finish called at time : 665320 ns : File "<workspace>/sim/adhd/tb_adhd.sv" Line 85
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Nov 13 10:11:01 2026...

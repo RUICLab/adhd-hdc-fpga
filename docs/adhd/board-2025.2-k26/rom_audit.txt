@@ -1,0 +1,1 @@
+BOARD ROM AUDIT PASS K=26 cells=test/golden_q_reg nonzero_init_properties=128
