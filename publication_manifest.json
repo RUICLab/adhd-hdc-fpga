@@ -1,5 +1,5 @@
 {
-  "release": "v1.0.0",
+  "release": "v1.0.1",
   "scope": "Implementation, verification, reproduction documentation, and technical evidence only",
   "license": "MIT",
   "evidence_processing": "Machine hostnames, absolute workspace roots and adapter identifier replaced with placeholders; text normalized to LF. Numeric results preserved.",
@@ -77,8 +77,8 @@
     "hw/adhd/adhd_board_top.sv": "0d13cd7e5f9ffa6c73503b38ed27411e508b9ccf78a4fa2ef9c4333f6eeb3800",
     "hw/adhd/adhd_hdc.sv": "f769365d532712f79f5fade019ac2e43c97b08afc8791159ec577caa8af4bff1",
     "hw/adhd/pynq_z2_board.xdc": "c9ce4f2bf88a15c418cdf957be965293c9fca2d9864fb94eced6752d0f0878e1",
-    "LICENSE": "70c247e9ee3afce28035d7aae2a285b60db261767c002ed3ee3abc56471b7cd9",
-    "README.md": "4fdc5cdd4d892a989e62f4a9c38c4d76b9a68e4579466b01aaa86b66f192578b",
+    "LICENSE": "22f425fb5739575cb6e5b4d4987938d1de5fcadf4970571eec1aef62b27d9c1c",
+    "README.md": "b9a7a6d7b2f085f4de0db3c4bb69edbfc1f049a7942fa71a6e60e80d3624a25a",
     "scripts/adhd_board_audit.tcl": "b5c0769fe619ab52fb834fd48430f5998f4805e869bddb1a035915b28eac2390",
     "scripts/adhd_board_build.tcl": "24b7890305444d71771d752a22f6807cf6e0adb732bb8c7327df6ec063da4f76",
     "scripts/adhd_board_collect.py": "b5def519e10ed8ca2274c7f9d8d3d0e11110afe5b76c748cbf6176021087570a",
@@ -91,5 +91,7 @@
     "scripts/adhd_verify.py": "521661a7d0b27f50e663f251dff8f69d72652b6adb188925a32a323dd2f0d96b",
     "sim/adhd/tb_adhd.sv": "9b29b0a6fdce4d48e7832e65f93de1e8362c753cc4b15be3e0844235a3401368",
     "sim/adhd/tb_board.sv": "d3f6a8ad9f64bd176642d63308365dd09394b3b5059714ed3d757a16ca1cd1b5"
-  }
+  },
+  "repository": "https://github.com/RUICLab/adhd-hdc-fpga",
+  "release_note": "Repository migration; numerical code and technical evidence unchanged. Destination MIT notice preserved alongside the source notice."
 }

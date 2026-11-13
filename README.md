@@ -48,7 +48,7 @@ for the CPU benchmark. No Python packages, model downloads, or datasets are
 needed for the deterministic checks.
 
 ```powershell
-git clone https://github.com/SepehrTa/adhd-hdc-fpga.git
+git clone https://github.com/RUICLab/adhd-hdc-fpga.git
 cd adhd-hdc-fpga
 # Set this to your installed Vivado root.
 $vivadoRoot = 'C:/AMDDesignTools/2025.2/Vivado'
