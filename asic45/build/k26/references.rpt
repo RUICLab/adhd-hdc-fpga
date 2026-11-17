@@ -1,0 +1,140 @@
+ 
+****************************************
+Report : reference
+Design : adhd_hdc
+Version: X-2025.06-SP3
+Date   : Tue Nov 17 11:34:50 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary
+                                  1.064000     446    474.544005  
+AND3_X1            NangateOpenCellLibrary
+                                  1.330000      58     77.140002  
+AND4_X1            NangateOpenCellLibrary
+                                  1.596000       5      7.980000  
+AOI21_X1           NangateOpenCellLibrary
+                                  1.064000     115    122.360001  
+AOI22_X1           NangateOpenCellLibrary
+                                  1.330000    1061   1411.130046  
+AOI211_X1          NangateOpenCellLibrary
+                                  1.330000      23     30.590001  
+AOI221_X1          NangateOpenCellLibrary
+                                  1.596000      25     39.899999  
+AOI222_X1          NangateOpenCellLibrary
+                                  2.128000      14     29.792000  
+BUF_X1             NangateOpenCellLibrary
+                                  0.798000     437    348.725990  
+CLKBUF_X1          NangateOpenCellLibrary
+                                  0.798000      30     23.939999  
+DFF_X1             NangateOpenCellLibrary
+                                  4.522000    1704   7705.487720  n
+FA_X1              NangateOpenCellLibrary
+                                  4.256000     148    629.888006  r
+HA_X1              NangateOpenCellLibrary
+                                  2.660000       3      7.980000  r
+INV_X1             NangateOpenCellLibrary
+                                  0.532000    1306    694.792007  
+NAND2_X1           NangateOpenCellLibrary
+                                  0.798000     385    307.229992  
+NAND3_X1           NangateOpenCellLibrary
+                                  1.064000     152    161.728002  
+NAND4_X1           NangateOpenCellLibrary
+                                  1.330000      29     38.570001  
+NOR2_X1            NangateOpenCellLibrary
+                                  0.798000     125     99.749997  
+NOR2_X2            NangateOpenCellLibrary
+                                  1.330000       1      1.330000  
+NOR3_X1            NangateOpenCellLibrary
+                                  1.064000      53     56.392001  
+NOR4_X1            NangateOpenCellLibrary
+                                  1.330000      23     30.590001  
+OAI21_X1           NangateOpenCellLibrary
+                                  1.064000     312    331.968003  
+OAI22_X1           NangateOpenCellLibrary
+                                  1.330000    1117   1485.610048  
+OAI211_X1          NangateOpenCellLibrary
+                                  1.330000      12     15.960001  
+OAI211_X2          NangateOpenCellLibrary
+                                  2.394000       1      2.394000  
+OAI221_X1          NangateOpenCellLibrary
+                                  1.596000      18     28.727999  
+OAI222_X1          NangateOpenCellLibrary
+                                  2.128000      70    148.960001  
+OR2_X1             NangateOpenCellLibrary
+                                  1.064000      22     23.408000  
+OR3_X1             NangateOpenCellLibrary
+                                  1.330000      36     47.880002  
+OR4_X1             NangateOpenCellLibrary
+                                  1.596000       1      1.596000  
+XNOR2_X1           NangateOpenCellLibrary
+                                  1.596000     451    719.795980  
+XOR2_X1            NangateOpenCellLibrary
+                                  1.596000     394    628.823983  
+adhd_hdc_DW01_add_35             24.738000       1     24.738000  h
+adhd_hdc_DW01_inc_1              81.928003       1     81.928003  h
+adhd_hdc_DW01_inc_2              31.388001       1     31.388001  h
+adhd_sram_8192x30  adhd_sram_k26
+                              106030.000000
+                                                 1  106030.000000 b, d
+-----------------------------------------------------------------------------
+Total 36 references                                 121903.017792
+
+****************************************
+Design: adhd_hdc_DW01_add_35 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21_X1           NangateOpenCellLibrary
+                                  1.064000       2      2.128000  
+FA_X1              NangateOpenCellLibrary
+                                  4.256000       3     12.768000  r
+INV_X1             NangateOpenCellLibrary
+                                  0.532000       6      3.192000  
+OAI21_X1           NangateOpenCellLibrary
+                                  1.064000       5      5.320000  
+OAI211_X1          NangateOpenCellLibrary
+                                  1.330000       1      1.330000  
+-----------------------------------------------------------------------------
+Total 5 references                                     24.738000
+
+****************************************
+Design: adhd_hdc_DW01_inc_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HA_X1              NangateOpenCellLibrary
+                                  2.660000      30     79.800003  r
+INV_X1             NangateOpenCellLibrary
+                                  0.532000       1      0.532000  
+XOR2_X1            NangateOpenCellLibrary
+                                  1.596000       1      1.596000  
+-----------------------------------------------------------------------------
+Total 3 references                                     81.928003
+
+****************************************
+Design: adhd_hdc_DW01_inc_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HA_X1              NangateOpenCellLibrary
+                                  2.660000      11     29.260001  r
+INV_X1             NangateOpenCellLibrary
+                                  0.532000       1      0.532000  
+XOR2_X1            NangateOpenCellLibrary
+                                  1.596000       1      1.596000  
+-----------------------------------------------------------------------------
+Total 3 references                                     31.388001
+1

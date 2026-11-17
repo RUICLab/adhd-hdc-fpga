@@ -1,0 +1,11 @@
+Notice: timing checks disabled with +notimingcheck at compile-time
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP1-1_Full64; Runtime version X-2025.06-SP1-1_Full64;  Nov 17 11:34 2026
+ASIC ACTIVITY PASS K=26 queries=8192 reads=8192 cycles=8223 winner=16 score=4170 duration_ns=82230.000
+$finish called from file "rtl/tb_activity.sv", line 55.
+$finish at simulation time            166385001
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 166385001 ps
+CPU Time:      0.890 seconds;       Data structure size:   0.8Mb
+Tue Nov 17 11:34:55 2026

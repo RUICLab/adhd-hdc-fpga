@@ -1,0 +1,29 @@
+{
+  "original_rtl_sha256": "f769365d532712f79f5fade019ac2e43c97b08afc8791159ec577caa8af4bff1",
+  "sram": {
+    "10": {
+      "logical_words": 8192,
+      "logical_width": 14,
+      "physical_width": 16,
+      "access_ns": 1.13856,
+      "cycle_ns": 1.1011,
+      "read_nj": 0.00917274,
+      "subthreshold_leakage_mw": 0.00032521,
+      "gate_leakage_mw": 0.000151501,
+      "area_mm2": 0.0508127,
+      "total_leakage_mw": 0.000476711
+    },
+    "26": {
+      "logical_words": 8192,
+      "logical_width": 30,
+      "physical_width": 32,
+      "access_ns": 1.51831,
+      "cycle_ns": 1.1011,
+      "read_nj": 0.0117855,
+      "subthreshold_leakage_mw": 0.000643976,
+      "gate_leakage_mw": 0.000298395,
+      "area_mm2": 0.10603,
+      "total_leakage_mw": 0.000942371
+    }
+  }
+}

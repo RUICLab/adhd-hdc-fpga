@@ -1,0 +1,42 @@
+ 
+****************************************
+check_design summary:
+Version:     X-2025.06-SP3
+Date:        Tue Nov 17 11:34:50 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     11
+    Unconnected ports (LINT-28)                                    11
+
+Cells                                                               3
+    Connected to power or ground (LINT-32)                          3
+
+Nets                                                                5
+    Unloaded nets (LINT-2)                                          5
+--------------------------------------------------------------------------------
+
+Warning: In design 'adhd_hdc', net 'SYNOPSYS_UNCONNECTED_5' driven by pin 'add_0_root_add_0_root_add_66_3/SUM[0]' has no loads. (LINT-2)
+Warning: In design 'adhd_hdc', net 'SYNOPSYS_UNCONNECTED_4' driven by pin 'add_0_root_add_0_root_add_66_3/SUM[1]' has no loads. (LINT-2)
+Warning: In design 'adhd_hdc', net 'SYNOPSYS_UNCONNECTED_3' driven by pin 'add_0_root_add_0_root_add_66_3/SUM[2]' has no loads. (LINT-2)
+Warning: In design 'adhd_hdc', net 'SYNOPSYS_UNCONNECTED_2' driven by pin 'add_0_root_add_0_root_add_66_3/SUM[3]' has no loads. (LINT-2)
+Warning: In design 'adhd_hdc', net 'SYNOPSYS_UNCONNECTED_1' driven by pin 'add_0_root_add_0_root_add_66_3/SUM[4]' has no loads. (LINT-2)
+Warning: In design 'adhd_hdc', port 'model_data[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'adhd_hdc', port 'model_data[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'adhd_hdc_DW01_add_35', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'adhd_hdc_DW01_add_35', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'adhd_hdc_DW01_add_35', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'adhd_hdc_DW01_add_35', port 'SUM[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'adhd_hdc_DW01_add_35', port 'SUM[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'adhd_hdc_DW01_add_35', port 'SUM[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'adhd_hdc_DW01_add_35', port 'SUM[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'adhd_hdc_DW01_add_35', port 'SUM[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'adhd_hdc_DW01_add_35', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'adhd_hdc', a pin on submodule 'add_0_root_add_0_root_add_66_3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'adhd_hdc', a pin on submodule 'add_0_root_add_0_root_add_66_3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'adhd_hdc', a pin on submodule 'add_0_root_add_0_root_add_66_3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+1

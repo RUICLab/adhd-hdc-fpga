@@ -1,0 +1,679 @@
+****************************************
+Report : timing
+	-path_type full_clock_expanded
+	-delay_type max
+	-input_pins
+	-nets
+	-slack_lesser_than 1000000.000000
+	-max_paths 10
+	-transition_time
+	-capacitance
+	-sort_by slack
+Design : adhd_hdc
+Version: X-2025.06-SP2
+Date   : Tue Nov 17 11:43:47 2026
+****************************************
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_9_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                  0.050000   0.000000   0.000000
+  clock network delay (ideal)                            0.000000   0.000000
+  input external delay                                   1.000000   1.000000 f
+  resetn (in)                                 0.050000   0.000000   1.000000 f
+  resetn (net)                   1 1.859100
+  U8140/A (INV_X1)                            0.050000   0.011593   1.011593 f
+  U8140/ZN (INV_X1)                           0.051576   0.080309   1.091902 r
+  n9640 (net)                   11 20.842062
+  U7810/A (BUF_X1)                            0.051576   0.012380   1.104283 r
+  U7810/Z (BUF_X1)                            0.059152   0.086481   1.190764 r
+  n9233 (net)                   12 24.680645
+  U7234/A2 (NOR2_X1)                          0.059152   0.020257   1.211021 r
+  U7234/ZN (NOR2_X1)                          0.013848   0.012606   1.223626 f
+  sram_read (net)                1 1.184990
+  U6416/A (BUF_X1)                            0.013848   0.007389   1.231016 f
+  U6416/Z (BUF_X1)                            0.007737   0.033188   1.264203 f
+  n9530 (net)                    3 3.772215
+  U6401/A (BUF_X1)                            0.007737   0.009674   1.273877 f
+  U6401/Z (BUF_X1)                            0.009629   0.033037   1.306915 f
+  n9527 (net)                    3 5.794545
+  U6590/A (INV_X1)                            0.009629   0.014860   1.321775 f
+  U6590/ZN (INV_X1)                           0.123515   0.136647   1.458422 r
+  n9524 (net)                   23 53.051479
+  U8573/A2 (NAND2_X1)                         0.123515   0.031562   1.489984 r
+  U8573/ZN (NAND2_X1)                         0.020878   0.021639   1.511624 f
+  n4799 (net)                    1 1.828314
+  U8572/A (OAI21_X1)                          0.020878   0.011401   1.523024 f
+  U8572/ZN (OAI21_X1)                         0.025267   0.024852   1.547876 r
+  n_1_net__11_ (net)             1 1.284399
+  U6252/A (BUF_X1)                            0.025267   0.008009   1.555885 r
+  U6252/Z (BUF_X1)                            0.008705   0.028345   1.584231 r
+  n7453 (net)                    1 2.309740
+  model_sram/A[11] (adhd_sram_8192x30)        0.008705   0.014403   1.598634 r
+  model_sram/Q[9] (adhd_sram_8192x30)         0.050000   1.518310   3.116944 f
+  sram_q[9] (net)                1 1.743126
+  U8551/A2 (AOI22_X1)                         0.050000   0.010870   3.127813 f
+  U8551/ZN (AOI22_X1)                         0.028977   0.056490   3.184304 r
+  n656 (net)                     1 2.009970
+  U8550/A (INV_X1)                            0.028977   0.012534   3.196837 r
+  U8550/ZN (INV_X1)                           0.007683   0.008520   3.205358 f
+  n9762 (net)                    1 1.372082
+  word0_reg_9_/D (DFF_X1)                     0.007683   0.008556   3.213913 f
+  data arrival time                                                 3.213913
+
+  clock core_clk (rise edge)                  0.050000   10.000000  10.000000
+  clock network delay (ideal)                            0.000000   10.000000
+  word0_reg_9_/CK (DFF_X1)                                          10.000000 r
+  clock reconvergence pessimism                          0.000000   10.000000
+  clock uncertainty                                      -0.100000  9.900000
+  library setup time                                     -0.024632  9.875368
+  data required time                                                9.875368
+  -----------------------------------------------------------------------------
+  data required time                                                9.875368
+  data arrival time                                                 -3.213913
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       6.661455
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_8_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                  0.050000   0.000000   0.000000
+  clock network delay (ideal)                            0.000000   0.000000
+  input external delay                                   1.000000   1.000000 f
+  resetn (in)                                 0.050000   0.000000   1.000000 f
+  resetn (net)                   1 1.859100
+  U8140/A (INV_X1)                            0.050000   0.011593   1.011593 f
+  U8140/ZN (INV_X1)                           0.051576   0.080309   1.091902 r
+  n9640 (net)                   11 20.842062
+  U7810/A (BUF_X1)                            0.051576   0.012380   1.104283 r
+  U7810/Z (BUF_X1)                            0.059152   0.086481   1.190764 r
+  n9233 (net)                   12 24.680645
+  U7234/A2 (NOR2_X1)                          0.059152   0.020257   1.211021 r
+  U7234/ZN (NOR2_X1)                          0.013848   0.012606   1.223626 f
+  sram_read (net)                1 1.184990
+  U6416/A (BUF_X1)                            0.013848   0.007389   1.231016 f
+  U6416/Z (BUF_X1)                            0.007737   0.033188   1.264203 f
+  n9530 (net)                    3 3.772215
+  U6401/A (BUF_X1)                            0.007737   0.009674   1.273877 f
+  U6401/Z (BUF_X1)                            0.009629   0.033037   1.306915 f
+  n9527 (net)                    3 5.794545
+  U6590/A (INV_X1)                            0.009629   0.014860   1.321775 f
+  U6590/ZN (INV_X1)                           0.123515   0.136647   1.458422 r
+  n9524 (net)                   23 53.051479
+  U8573/A2 (NAND2_X1)                         0.123515   0.031562   1.489984 r
+  U8573/ZN (NAND2_X1)                         0.020878   0.021639   1.511624 f
+  n4799 (net)                    1 1.828314
+  U8572/A (OAI21_X1)                          0.020878   0.011401   1.523024 f
+  U8572/ZN (OAI21_X1)                         0.025267   0.024852   1.547876 r
+  n_1_net__11_ (net)             1 1.284399
+  U6252/A (BUF_X1)                            0.025267   0.008009   1.555885 r
+  U6252/Z (BUF_X1)                            0.008705   0.028345   1.584231 r
+  n7453 (net)                    1 2.309740
+  model_sram/A[11] (adhd_sram_8192x30)        0.008705   0.014403   1.598634 r
+  model_sram/Q[8] (adhd_sram_8192x30)         0.050000   1.518310   3.116944 f
+  sram_q[8] (net)                1 1.743126
+  U8549/A2 (AOI22_X1)                         0.050000   0.010870   3.127813 f
+  U8549/ZN (AOI22_X1)                         0.028977   0.056490   3.184304 r
+  n655 (net)                     1 2.009970
+  U8548/A (INV_X1)                            0.028977   0.012534   3.196837 r
+  U8548/ZN (INV_X1)                           0.007683   0.008520   3.205358 f
+  n9763 (net)                    1 1.372082
+  word0_reg_8_/D (DFF_X1)                     0.007683   0.008556   3.213913 f
+  data arrival time                                                 3.213913
+
+  clock core_clk (rise edge)                  0.050000   10.000000  10.000000
+  clock network delay (ideal)                            0.000000   10.000000
+  word0_reg_8_/CK (DFF_X1)                                          10.000000 r
+  clock reconvergence pessimism                          0.000000   10.000000
+  clock uncertainty                                      -0.100000  9.900000
+  library setup time                                     -0.024632  9.875368
+  data required time                                                9.875368
+  -----------------------------------------------------------------------------
+  data required time                                                9.875368
+  data arrival time                                                 -3.213913
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       6.661455
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_7_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                  0.050000   0.000000   0.000000
+  clock network delay (ideal)                            0.000000   0.000000
+  input external delay                                   1.000000   1.000000 f
+  resetn (in)                                 0.050000   0.000000   1.000000 f
+  resetn (net)                   1 1.859100
+  U8140/A (INV_X1)                            0.050000   0.011593   1.011593 f
+  U8140/ZN (INV_X1)                           0.051576   0.080309   1.091902 r
+  n9640 (net)                   11 20.842062
+  U7810/A (BUF_X1)                            0.051576   0.012380   1.104283 r
+  U7810/Z (BUF_X1)                            0.059152   0.086481   1.190764 r
+  n9233 (net)                   12 24.680645
+  U7234/A2 (NOR2_X1)                          0.059152   0.020257   1.211021 r
+  U7234/ZN (NOR2_X1)                          0.013848   0.012606   1.223626 f
+  sram_read (net)                1 1.184990
+  U6416/A (BUF_X1)                            0.013848   0.007389   1.231016 f
+  U6416/Z (BUF_X1)                            0.007737   0.033188   1.264203 f
+  n9530 (net)                    3 3.772215
+  U6401/A (BUF_X1)                            0.007737   0.009674   1.273877 f
+  U6401/Z (BUF_X1)                            0.009629   0.033037   1.306915 f
+  n9527 (net)                    3 5.794545
+  U6590/A (INV_X1)                            0.009629   0.014860   1.321775 f
+  U6590/ZN (INV_X1)                           0.123515   0.136647   1.458422 r
+  n9524 (net)                   23 53.051479
+  U8573/A2 (NAND2_X1)                         0.123515   0.031562   1.489984 r
+  U8573/ZN (NAND2_X1)                         0.020878   0.021639   1.511624 f
+  n4799 (net)                    1 1.828314
+  U8572/A (OAI21_X1)                          0.020878   0.011401   1.523024 f
+  U8572/ZN (OAI21_X1)                         0.025267   0.024852   1.547876 r
+  n_1_net__11_ (net)             1 1.284399
+  U6252/A (BUF_X1)                            0.025267   0.008009   1.555885 r
+  U6252/Z (BUF_X1)                            0.008705   0.028345   1.584231 r
+  n7453 (net)                    1 2.309740
+  model_sram/A[11] (adhd_sram_8192x30)        0.008705   0.014403   1.598634 r
+  model_sram/Q[7] (adhd_sram_8192x30)         0.050000   1.518310   3.116944 f
+  sram_q[7] (net)                1 1.743126
+  U8547/A2 (AOI22_X1)                         0.050000   0.010870   3.127813 f
+  U8547/ZN (AOI22_X1)                         0.028977   0.056490   3.184304 r
+  n654 (net)                     1 2.009970
+  U8546/A (INV_X1)                            0.028977   0.012534   3.196837 r
+  U8546/ZN (INV_X1)                           0.007683   0.008520   3.205358 f
+  n9764 (net)                    1 1.372082
+  word0_reg_7_/D (DFF_X1)                     0.007683   0.008556   3.213913 f
+  data arrival time                                                 3.213913
+
+  clock core_clk (rise edge)                  0.050000   10.000000  10.000000
+  clock network delay (ideal)                            0.000000   10.000000
+  word0_reg_7_/CK (DFF_X1)                                          10.000000 r
+  clock reconvergence pessimism                          0.000000   10.000000
+  clock uncertainty                                      -0.100000  9.900000
+  library setup time                                     -0.024632  9.875368
+  data required time                                                9.875368
+  -----------------------------------------------------------------------------
+  data required time                                                9.875368
+  data arrival time                                                 -3.213913
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       6.661455
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_6_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                  0.050000   0.000000   0.000000
+  clock network delay (ideal)                            0.000000   0.000000
+  input external delay                                   1.000000   1.000000 f
+  resetn (in)                                 0.050000   0.000000   1.000000 f
+  resetn (net)                   1 1.859100
+  U8140/A (INV_X1)                            0.050000   0.011593   1.011593 f
+  U8140/ZN (INV_X1)                           0.051576   0.080309   1.091902 r
+  n9640 (net)                   11 20.842062
+  U7810/A (BUF_X1)                            0.051576   0.012380   1.104283 r
+  U7810/Z (BUF_X1)                            0.059152   0.086481   1.190764 r
+  n9233 (net)                   12 24.680645
+  U7234/A2 (NOR2_X1)                          0.059152   0.020257   1.211021 r
+  U7234/ZN (NOR2_X1)                          0.013848   0.012606   1.223626 f
+  sram_read (net)                1 1.184990
+  U6416/A (BUF_X1)                            0.013848   0.007389   1.231016 f
+  U6416/Z (BUF_X1)                            0.007737   0.033188   1.264203 f
+  n9530 (net)                    3 3.772215
+  U6401/A (BUF_X1)                            0.007737   0.009674   1.273877 f
+  U6401/Z (BUF_X1)                            0.009629   0.033037   1.306915 f
+  n9527 (net)                    3 5.794545
+  U6590/A (INV_X1)                            0.009629   0.014860   1.321775 f
+  U6590/ZN (INV_X1)                           0.123515   0.136647   1.458422 r
+  n9524 (net)                   23 53.051479
+  U8573/A2 (NAND2_X1)                         0.123515   0.031562   1.489984 r
+  U8573/ZN (NAND2_X1)                         0.020878   0.021639   1.511624 f
+  n4799 (net)                    1 1.828314
+  U8572/A (OAI21_X1)                          0.020878   0.011401   1.523024 f
+  U8572/ZN (OAI21_X1)                         0.025267   0.024852   1.547876 r
+  n_1_net__11_ (net)             1 1.284399
+  U6252/A (BUF_X1)                            0.025267   0.008009   1.555885 r
+  U6252/Z (BUF_X1)                            0.008705   0.028345   1.584231 r
+  n7453 (net)                    1 2.309740
+  model_sram/A[11] (adhd_sram_8192x30)        0.008705   0.014403   1.598634 r
+  model_sram/Q[6] (adhd_sram_8192x30)         0.050000   1.518310   3.116944 f
+  sram_q[6] (net)                1 1.743126
+  U8545/A2 (AOI22_X1)                         0.050000   0.010870   3.127813 f
+  U8545/ZN (AOI22_X1)                         0.028977   0.056490   3.184304 r
+  n653 (net)                     1 2.009970
+  U8544/A (INV_X1)                            0.028977   0.012534   3.196837 r
+  U8544/ZN (INV_X1)                           0.007683   0.008520   3.205358 f
+  n9765 (net)                    1 1.372082
+  word0_reg_6_/D (DFF_X1)                     0.007683   0.008556   3.213913 f
+  data arrival time                                                 3.213913
+
+  clock core_clk (rise edge)                  0.050000   10.000000  10.000000
+  clock network delay (ideal)                            0.000000   10.000000
+  word0_reg_6_/CK (DFF_X1)                                          10.000000 r
+  clock reconvergence pessimism                          0.000000   10.000000
+  clock uncertainty                                      -0.100000  9.900000
+  library setup time                                     -0.024632  9.875368
+  data required time                                                9.875368
+  -----------------------------------------------------------------------------
+  data required time                                                9.875368
+  data arrival time                                                 -3.213913
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       6.661455
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_5_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                  0.050000   0.000000   0.000000
+  clock network delay (ideal)                            0.000000   0.000000
+  input external delay                                   1.000000   1.000000 f
+  resetn (in)                                 0.050000   0.000000   1.000000 f
+  resetn (net)                   1 1.859100
+  U8140/A (INV_X1)                            0.050000   0.011593   1.011593 f
+  U8140/ZN (INV_X1)                           0.051576   0.080309   1.091902 r
+  n9640 (net)                   11 20.842062
+  U7810/A (BUF_X1)                            0.051576   0.012380   1.104283 r
+  U7810/Z (BUF_X1)                            0.059152   0.086481   1.190764 r
+  n9233 (net)                   12 24.680645
+  U7234/A2 (NOR2_X1)                          0.059152   0.020257   1.211021 r
+  U7234/ZN (NOR2_X1)                          0.013848   0.012606   1.223626 f
+  sram_read (net)                1 1.184990
+  U6416/A (BUF_X1)                            0.013848   0.007389   1.231016 f
+  U6416/Z (BUF_X1)                            0.007737   0.033188   1.264203 f
+  n9530 (net)                    3 3.772215
+  U6401/A (BUF_X1)                            0.007737   0.009674   1.273877 f
+  U6401/Z (BUF_X1)                            0.009629   0.033037   1.306915 f
+  n9527 (net)                    3 5.794545
+  U6590/A (INV_X1)                            0.009629   0.014860   1.321775 f
+  U6590/ZN (INV_X1)                           0.123515   0.136647   1.458422 r
+  n9524 (net)                   23 53.051479
+  U8573/A2 (NAND2_X1)                         0.123515   0.031562   1.489984 r
+  U8573/ZN (NAND2_X1)                         0.020878   0.021639   1.511624 f
+  n4799 (net)                    1 1.828314
+  U8572/A (OAI21_X1)                          0.020878   0.011401   1.523024 f
+  U8572/ZN (OAI21_X1)                         0.025267   0.024852   1.547876 r
+  n_1_net__11_ (net)             1 1.284399
+  U6252/A (BUF_X1)                            0.025267   0.008009   1.555885 r
+  U6252/Z (BUF_X1)                            0.008705   0.028345   1.584231 r
+  n7453 (net)                    1 2.309740
+  model_sram/A[11] (adhd_sram_8192x30)        0.008705   0.014403   1.598634 r
+  model_sram/Q[5] (adhd_sram_8192x30)         0.050000   1.518310   3.116944 f
+  sram_q[5] (net)                1 1.743126
+  U8543/A2 (AOI22_X1)                         0.050000   0.010870   3.127813 f
+  U8543/ZN (AOI22_X1)                         0.028977   0.056490   3.184304 r
+  n652 (net)                     1 2.009970
+  U8542/A (INV_X1)                            0.028977   0.012534   3.196837 r
+  U8542/ZN (INV_X1)                           0.007683   0.008520   3.205358 f
+  n9766 (net)                    1 1.372082
+  word0_reg_5_/D (DFF_X1)                     0.007683   0.008556   3.213913 f
+  data arrival time                                                 3.213913
+
+  clock core_clk (rise edge)                  0.050000   10.000000  10.000000
+  clock network delay (ideal)                            0.000000   10.000000
+  word0_reg_5_/CK (DFF_X1)                                          10.000000 r
+  clock reconvergence pessimism                          0.000000   10.000000
+  clock uncertainty                                      -0.100000  9.900000
+  library setup time                                     -0.024632  9.875368
+  data required time                                                9.875368
+  -----------------------------------------------------------------------------
+  data required time                                                9.875368
+  data arrival time                                                 -3.213913
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       6.661455
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_4_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                  0.050000   0.000000   0.000000
+  clock network delay (ideal)                            0.000000   0.000000
+  input external delay                                   1.000000   1.000000 f
+  resetn (in)                                 0.050000   0.000000   1.000000 f
+  resetn (net)                   1 1.859100
+  U8140/A (INV_X1)                            0.050000   0.011593   1.011593 f
+  U8140/ZN (INV_X1)                           0.051576   0.080309   1.091902 r
+  n9640 (net)                   11 20.842062
+  U7810/A (BUF_X1)                            0.051576   0.012380   1.104283 r
+  U7810/Z (BUF_X1)                            0.059152   0.086481   1.190764 r
+  n9233 (net)                   12 24.680645
+  U7234/A2 (NOR2_X1)                          0.059152   0.020257   1.211021 r
+  U7234/ZN (NOR2_X1)                          0.013848   0.012606   1.223626 f
+  sram_read (net)                1 1.184990
+  U6416/A (BUF_X1)                            0.013848   0.007389   1.231016 f
+  U6416/Z (BUF_X1)                            0.007737   0.033188   1.264203 f
+  n9530 (net)                    3 3.772215
+  U6401/A (BUF_X1)                            0.007737   0.009674   1.273877 f
+  U6401/Z (BUF_X1)                            0.009629   0.033037   1.306915 f
+  n9527 (net)                    3 5.794545
+  U6590/A (INV_X1)                            0.009629   0.014860   1.321775 f
+  U6590/ZN (INV_X1)                           0.123515   0.136647   1.458422 r
+  n9524 (net)                   23 53.051479
+  U8573/A2 (NAND2_X1)                         0.123515   0.031562   1.489984 r
+  U8573/ZN (NAND2_X1)                         0.020878   0.021639   1.511624 f
+  n4799 (net)                    1 1.828314
+  U8572/A (OAI21_X1)                          0.020878   0.011401   1.523024 f
+  U8572/ZN (OAI21_X1)                         0.025267   0.024852   1.547876 r
+  n_1_net__11_ (net)             1 1.284399
+  U6252/A (BUF_X1)                            0.025267   0.008009   1.555885 r
+  U6252/Z (BUF_X1)                            0.008705   0.028345   1.584231 r
+  n7453 (net)                    1 2.309740
+  model_sram/A[11] (adhd_sram_8192x30)        0.008705   0.014403   1.598634 r
+  model_sram/Q[4] (adhd_sram_8192x30)         0.050000   1.518310   3.116944 f
+  sram_q[4] (net)                1 1.743126
+  U8541/A2 (AOI22_X1)                         0.050000   0.010870   3.127813 f
+  U8541/ZN (AOI22_X1)                         0.028977   0.056490   3.184304 r
+  n651 (net)                     1 2.009970
+  U8540/A (INV_X1)                            0.028977   0.012534   3.196837 r
+  U8540/ZN (INV_X1)                           0.007683   0.008520   3.205358 f
+  n9767 (net)                    1 1.372082
+  word0_reg_4_/D (DFF_X1)                     0.007683   0.008556   3.213913 f
+  data arrival time                                                 3.213913
+
+  clock core_clk (rise edge)                  0.050000   10.000000  10.000000
+  clock network delay (ideal)                            0.000000   10.000000
+  word0_reg_4_/CK (DFF_X1)                                          10.000000 r
+  clock reconvergence pessimism                          0.000000   10.000000
+  clock uncertainty                                      -0.100000  9.900000
+  library setup time                                     -0.024632  9.875368
+  data required time                                                9.875368
+  -----------------------------------------------------------------------------
+  data required time                                                9.875368
+  data arrival time                                                 -3.213913
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       6.661455
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_3_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                  0.050000   0.000000   0.000000
+  clock network delay (ideal)                            0.000000   0.000000
+  input external delay                                   1.000000   1.000000 f
+  resetn (in)                                 0.050000   0.000000   1.000000 f
+  resetn (net)                   1 1.859100
+  U8140/A (INV_X1)                            0.050000   0.011593   1.011593 f
+  U8140/ZN (INV_X1)                           0.051576   0.080309   1.091902 r
+  n9640 (net)                   11 20.842062
+  U7810/A (BUF_X1)                            0.051576   0.012380   1.104283 r
+  U7810/Z (BUF_X1)                            0.059152   0.086481   1.190764 r
+  n9233 (net)                   12 24.680645
+  U7234/A2 (NOR2_X1)                          0.059152   0.020257   1.211021 r
+  U7234/ZN (NOR2_X1)                          0.013848   0.012606   1.223626 f
+  sram_read (net)                1 1.184990
+  U6416/A (BUF_X1)                            0.013848   0.007389   1.231016 f
+  U6416/Z (BUF_X1)                            0.007737   0.033188   1.264203 f
+  n9530 (net)                    3 3.772215
+  U6401/A (BUF_X1)                            0.007737   0.009674   1.273877 f
+  U6401/Z (BUF_X1)                            0.009629   0.033037   1.306915 f
+  n9527 (net)                    3 5.794545
+  U6590/A (INV_X1)                            0.009629   0.014860   1.321775 f
+  U6590/ZN (INV_X1)                           0.123515   0.136647   1.458422 r
+  n9524 (net)                   23 53.051479
+  U8573/A2 (NAND2_X1)                         0.123515   0.031562   1.489984 r
+  U8573/ZN (NAND2_X1)                         0.020878   0.021639   1.511624 f
+  n4799 (net)                    1 1.828314
+  U8572/A (OAI21_X1)                          0.020878   0.011401   1.523024 f
+  U8572/ZN (OAI21_X1)                         0.025267   0.024852   1.547876 r
+  n_1_net__11_ (net)             1 1.284399
+  U6252/A (BUF_X1)                            0.025267   0.008009   1.555885 r
+  U6252/Z (BUF_X1)                            0.008705   0.028345   1.584231 r
+  n7453 (net)                    1 2.309740
+  model_sram/A[11] (adhd_sram_8192x30)        0.008705   0.014403   1.598634 r
+  model_sram/Q[3] (adhd_sram_8192x30)         0.050000   1.518310   3.116944 f
+  sram_q[3] (net)                1 1.743126
+  U8539/A2 (AOI22_X1)                         0.050000   0.010870   3.127813 f
+  U8539/ZN (AOI22_X1)                         0.028977   0.056490   3.184304 r
+  n650 (net)                     1 2.009970
+  U8538/A (INV_X1)                            0.028977   0.012534   3.196837 r
+  U8538/ZN (INV_X1)                           0.007683   0.008520   3.205358 f
+  n9768 (net)                    1 1.372082
+  word0_reg_3_/D (DFF_X1)                     0.007683   0.008556   3.213913 f
+  data arrival time                                                 3.213913
+
+  clock core_clk (rise edge)                  0.050000   10.000000  10.000000
+  clock network delay (ideal)                            0.000000   10.000000
+  word0_reg_3_/CK (DFF_X1)                                          10.000000 r
+  clock reconvergence pessimism                          0.000000   10.000000
+  clock uncertainty                                      -0.100000  9.900000
+  library setup time                                     -0.024632  9.875368
+  data required time                                                9.875368
+  -----------------------------------------------------------------------------
+  data required time                                                9.875368
+  data arrival time                                                 -3.213913
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       6.661455
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                  0.050000   0.000000   0.000000
+  clock network delay (ideal)                            0.000000   0.000000
+  input external delay                                   1.000000   1.000000 f
+  resetn (in)                                 0.050000   0.000000   1.000000 f
+  resetn (net)                   1 1.859100
+  U8140/A (INV_X1)                            0.050000   0.011593   1.011593 f
+  U8140/ZN (INV_X1)                           0.051576   0.080309   1.091902 r
+  n9640 (net)                   11 20.842062
+  U7810/A (BUF_X1)                            0.051576   0.012380   1.104283 r
+  U7810/Z (BUF_X1)                            0.059152   0.086481   1.190764 r
+  n9233 (net)                   12 24.680645
+  U7234/A2 (NOR2_X1)                          0.059152   0.020257   1.211021 r
+  U7234/ZN (NOR2_X1)                          0.013848   0.012606   1.223626 f
+  sram_read (net)                1 1.184990
+  U6416/A (BUF_X1)                            0.013848   0.007389   1.231016 f
+  U6416/Z (BUF_X1)                            0.007737   0.033188   1.264203 f
+  n9530 (net)                    3 3.772215
+  U6401/A (BUF_X1)                            0.007737   0.009674   1.273877 f
+  U6401/Z (BUF_X1)                            0.009629   0.033037   1.306915 f
+  n9527 (net)                    3 5.794545
+  U6590/A (INV_X1)                            0.009629   0.014860   1.321775 f
+  U6590/ZN (INV_X1)                           0.123515   0.136647   1.458422 r
+  n9524 (net)                   23 53.051479
+  U8573/A2 (NAND2_X1)                         0.123515   0.031562   1.489984 r
+  U8573/ZN (NAND2_X1)                         0.020878   0.021639   1.511624 f
+  n4799 (net)                    1 1.828314
+  U8572/A (OAI21_X1)                          0.020878   0.011401   1.523024 f
+  U8572/ZN (OAI21_X1)                         0.025267   0.024852   1.547876 r
+  n_1_net__11_ (net)             1 1.284399
+  U6252/A (BUF_X1)                            0.025267   0.008009   1.555885 r
+  U6252/Z (BUF_X1)                            0.008705   0.028345   1.584231 r
+  n7453 (net)                    1 2.309740
+  model_sram/A[11] (adhd_sram_8192x30)        0.008705   0.014403   1.598634 r
+  model_sram/Q[2] (adhd_sram_8192x30)         0.050000   1.518310   3.116944 f
+  sram_q[2] (net)                1 1.743126
+  U8537/A2 (AOI22_X1)                         0.050000   0.010870   3.127813 f
+  U8537/ZN (AOI22_X1)                         0.028977   0.056490   3.184304 r
+  n649 (net)                     1 2.009970
+  U8536/A (INV_X1)                            0.028977   0.012534   3.196837 r
+  U8536/ZN (INV_X1)                           0.007683   0.008520   3.205358 f
+  n9769 (net)                    1 1.372082
+  word0_reg_2_/D (DFF_X1)                     0.007683   0.008556   3.213913 f
+  data arrival time                                                 3.213913
+
+  clock core_clk (rise edge)                  0.050000   10.000000  10.000000
+  clock network delay (ideal)                            0.000000   10.000000
+  word0_reg_2_/CK (DFF_X1)                                          10.000000 r
+  clock reconvergence pessimism                          0.000000   10.000000
+  clock uncertainty                                      -0.100000  9.900000
+  library setup time                                     -0.024632  9.875368
+  data required time                                                9.875368
+  -----------------------------------------------------------------------------
+  data required time                                                9.875368
+  data arrival time                                                 -3.213913
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       6.661455
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_29_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                  0.050000   0.000000   0.000000
+  clock network delay (ideal)                            0.000000   0.000000
+  input external delay                                   1.000000   1.000000 f
+  resetn (in)                                 0.050000   0.000000   1.000000 f
+  resetn (net)                   1 1.859100
+  U8140/A (INV_X1)                            0.050000   0.011593   1.011593 f
+  U8140/ZN (INV_X1)                           0.051576   0.080309   1.091902 r
+  n9640 (net)                   11 20.842062
+  U7810/A (BUF_X1)                            0.051576   0.012380   1.104283 r
+  U7810/Z (BUF_X1)                            0.059152   0.086481   1.190764 r
+  n9233 (net)                   12 24.680645
+  U7234/A2 (NOR2_X1)                          0.059152   0.020257   1.211021 r
+  U7234/ZN (NOR2_X1)                          0.013848   0.012606   1.223626 f
+  sram_read (net)                1 1.184990
+  U6416/A (BUF_X1)                            0.013848   0.007389   1.231016 f
+  U6416/Z (BUF_X1)                            0.007737   0.033188   1.264203 f
+  n9530 (net)                    3 3.772215
+  U6401/A (BUF_X1)                            0.007737   0.009674   1.273877 f
+  U6401/Z (BUF_X1)                            0.009629   0.033037   1.306915 f
+  n9527 (net)                    3 5.794545
+  U6590/A (INV_X1)                            0.009629   0.014860   1.321775 f
+  U6590/ZN (INV_X1)                           0.123515   0.136647   1.458422 r
+  n9524 (net)                   23 53.051479
+  U8573/A2 (NAND2_X1)                         0.123515   0.031562   1.489984 r
+  U8573/ZN (NAND2_X1)                         0.020878   0.021639   1.511624 f
+  n4799 (net)                    1 1.828314
+  U8572/A (OAI21_X1)                          0.020878   0.011401   1.523024 f
+  U8572/ZN (OAI21_X1)                         0.025267   0.024852   1.547876 r
+  n_1_net__11_ (net)             1 1.284399
+  U6252/A (BUF_X1)                            0.025267   0.008009   1.555885 r
+  U6252/Z (BUF_X1)                            0.008705   0.028345   1.584231 r
+  n7453 (net)                    1 2.309740
+  model_sram/A[11] (adhd_sram_8192x30)        0.008705   0.014403   1.598634 r
+  model_sram/Q[29] (adhd_sram_8192x30)        0.050000   1.518310   3.116944 f
+  sram_q[29] (net)               1 1.743126
+  U8535/A2 (AOI22_X1)                         0.050000   0.010870   3.127813 f
+  U8535/ZN (AOI22_X1)                         0.028977   0.056490   3.184304 r
+  n648 (net)                     1 2.009970
+  U8534/A (INV_X1)                            0.028977   0.012534   3.196837 r
+  U8534/ZN (INV_X1)                           0.007683   0.008520   3.205358 f
+  n9770 (net)                    1 1.372082
+  word0_reg_29_/D (DFF_X1)                    0.007683   0.008556   3.213913 f
+  data arrival time                                                 3.213913
+
+  clock core_clk (rise edge)                  0.050000   10.000000  10.000000
+  clock network delay (ideal)                            0.000000   10.000000
+  word0_reg_29_/CK (DFF_X1)                                         10.000000 r
+  clock reconvergence pessimism                          0.000000   10.000000
+  clock uncertainty                                      -0.100000  9.900000
+  library setup time                                     -0.024632  9.875368
+  data required time                                                9.875368
+  -----------------------------------------------------------------------------
+  data required time                                                9.875368
+  data arrival time                                                 -3.213913
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       6.661455
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_28_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                  0.050000   0.000000   0.000000
+  clock network delay (ideal)                            0.000000   0.000000
+  input external delay                                   1.000000   1.000000 f
+  resetn (in)                                 0.050000   0.000000   1.000000 f
+  resetn (net)                   1 1.859100
+  U8140/A (INV_X1)                            0.050000   0.011593   1.011593 f
+  U8140/ZN (INV_X1)                           0.051576   0.080309   1.091902 r
+  n9640 (net)                   11 20.842062
+  U7810/A (BUF_X1)                            0.051576   0.012380   1.104283 r
+  U7810/Z (BUF_X1)                            0.059152   0.086481   1.190764 r
+  n9233 (net)                   12 24.680645
+  U7234/A2 (NOR2_X1)                          0.059152   0.020257   1.211021 r
+  U7234/ZN (NOR2_X1)                          0.013848   0.012606   1.223626 f
+  sram_read (net)                1 1.184990
+  U6416/A (BUF_X1)                            0.013848   0.007389   1.231016 f
+  U6416/Z (BUF_X1)                            0.007737   0.033188   1.264203 f
+  n9530 (net)                    3 3.772215
+  U6401/A (BUF_X1)                            0.007737   0.009674   1.273877 f
+  U6401/Z (BUF_X1)                            0.009629   0.033037   1.306915 f
+  n9527 (net)                    3 5.794545
+  U6590/A (INV_X1)                            0.009629   0.014860   1.321775 f
+  U6590/ZN (INV_X1)                           0.123515   0.136647   1.458422 r
+  n9524 (net)                   23 53.051479
+  U8573/A2 (NAND2_X1)                         0.123515   0.031562   1.489984 r
+  U8573/ZN (NAND2_X1)                         0.020878   0.021639   1.511624 f
+  n4799 (net)                    1 1.828314
+  U8572/A (OAI21_X1)                          0.020878   0.011401   1.523024 f
+  U8572/ZN (OAI21_X1)                         0.025267   0.024852   1.547876 r
+  n_1_net__11_ (net)             1 1.284399
+  U6252/A (BUF_X1)                            0.025267   0.008009   1.555885 r
+  U6252/Z (BUF_X1)                            0.008705   0.028345   1.584231 r
+  n7453 (net)                    1 2.309740
+  model_sram/A[11] (adhd_sram_8192x30)        0.008705   0.014403   1.598634 r
+  model_sram/Q[28] (adhd_sram_8192x30)        0.050000   1.518310   3.116944 f
+  sram_q[28] (net)               1 1.743126
+  U8533/A2 (AOI22_X1)                         0.050000   0.010870   3.127813 f
+  U8533/ZN (AOI22_X1)                         0.028977   0.056490   3.184304 r
+  n647 (net)                     1 2.009970
+  U8532/A (INV_X1)                            0.028977   0.012534   3.196837 r
+  U8532/ZN (INV_X1)                           0.007683   0.008520   3.205358 f
+  n9771 (net)                    1 1.372082
+  word0_reg_28_/D (DFF_X1)                    0.007683   0.008556   3.213913 f
+  data arrival time                                                 3.213913
+
+  clock core_clk (rise edge)                  0.050000   10.000000  10.000000
+  clock network delay (ideal)                            0.000000   10.000000
+  word0_reg_28_/CK (DFF_X1)                                         10.000000 r
+  clock reconvergence pessimism                          0.000000   10.000000
+  clock uncertainty                                      -0.100000  9.900000
+  library setup time                                     -0.024632  9.875368
+  data required time                                                9.875368
+  -----------------------------------------------------------------------------
+  data required time                                                9.875368
+  data arrival time                                                 -3.213913
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       6.661455
+
+Warning: report_timing has satisfied the max_paths criteria. There are 1808 further endpoints which have paths of interest with slack less than 1000000.000000 that were not considered when generating this report. (UITE-502)
+
+1

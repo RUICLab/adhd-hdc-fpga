@@ -1,0 +1,54 @@
+****************************************
+Report : Averaged Power
+	-verbose
+	-nosplit
+Design : adhd_hdc
+Version: X-2025.06-SP2
+Date   : Tue Nov 17 11:43:44 2026
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: vendor/NangateOpenCellLibrary_typical.db)
+    adhd_sram_k10 (File: vendor/sram_k10.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Cell               Design       Wire_model  Library       Selection_type
+--------------------------------------------------------------------------------
+                   adhd_hdc     5K_hvratio_1_1 NangateOpenCellLibrary user-specified
+
+Power-specific unit information :
+    Voltage Units = 1 V
+    Capacitance Units = 0.001 pf
+    Time Units = 1 ns
+    Dynamic Power Units = 1 W
+    Leakage Power Units = 1 W
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network           7.317e-04    0.0000    0.0000 7.317e-04 (34.32%)  i
+register                3.112e-04 1.076e-04 1.097e-04 5.285e-04 (24.79%)  
+combinational           3.792e-04 3.283e-04 1.632e-04 8.707e-04 (40.85%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000 8.468e-07    0.0000 8.468e-07 ( 0.04%)  
+
+  Net Switching Power  = 4.368e-04   (20.49%)
+  Cell Internal Power  = 1.422e-03   (66.71%)
+  Cell Leakage Power   = 2.729e-04   (12.80%)
+                         ---------
+Total Power            = 2.132e-03  (100.00%)
+
+1

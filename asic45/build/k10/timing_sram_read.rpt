@@ -1,0 +1,134 @@
+****************************************
+Report : timing
+	-path_type full_clock_expanded
+	-delay_type max
+	-slack_lesser_than 1000000.000000
+	-max_paths 3
+	-sort_by slack
+Design : adhd_hdc
+Version: X-2025.06-SP2
+Date   : Tue Nov 17 11:43:42 2026
+****************************************
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_9_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  resetn (in)                                         0.000000   1.000000 f
+  U5715/ZN (INV_X1)                                   0.132635   1.132635 r
+  U6669/ZN (INV_X1)                                   0.091104   1.223738 f
+  U5692/ZN (AND2_X1)                                  0.066041   1.289780 f
+  U5641/Z (BUF_X1)                                    0.076705   1.366484 f
+  U5956/ZN (INV_X1)                                   0.125442   1.491927 r
+  U7376/ZN (NAND2_X1)                                 0.046328   1.538255 f
+  U7375/ZN (OAI21_X1)                                 0.033791   1.572047 r
+  U5391/Z (BUF_X1)                                    0.036337   1.608384 r
+  model_sram/Q[9] (adhd_sram_8192x14) <-              1.152963   2.761346 f
+  U7354/ZN (AOI22_X1)                                 0.067360   2.828707 r
+  U7353/ZN (INV_X1)                                   0.021054   2.849760 f
+  word0_reg_9_/D (DFF_X1)                             0.008556   2.858316 f
+  data arrival time                                              2.858316
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  word0_reg_9_/CK (DFF_X1)                                       10.000000 r
+  clock reconvergence pessimism                       0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  library setup time                                  -0.024632  9.875368
+  data required time                                             9.875368
+  ------------------------------------------------------------------------------
+  data required time                                             9.875368
+  data arrival time                                              -2.858316
+  ------------------------------------------------------------------------------
+  slack (MET)                                                    7.017052
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_8_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  resetn (in)                                         0.000000   1.000000 f
+  U5715/ZN (INV_X1)                                   0.132635   1.132635 r
+  U6669/ZN (INV_X1)                                   0.091104   1.223738 f
+  U5692/ZN (AND2_X1)                                  0.066041   1.289780 f
+  U5641/Z (BUF_X1)                                    0.076705   1.366484 f
+  U5956/ZN (INV_X1)                                   0.125442   1.491927 r
+  U7376/ZN (NAND2_X1)                                 0.046328   1.538255 f
+  U7375/ZN (OAI21_X1)                                 0.033791   1.572047 r
+  U5391/Z (BUF_X1)                                    0.036337   1.608384 r
+  model_sram/Q[8] (adhd_sram_8192x14) <-              1.152963   2.761346 f
+  U7352/ZN (AOI22_X1)                                 0.067360   2.828707 r
+  U7351/ZN (INV_X1)                                   0.021054   2.849760 f
+  word0_reg_8_/D (DFF_X1)                             0.008556   2.858316 f
+  data arrival time                                              2.858316
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  word0_reg_8_/CK (DFF_X1)                                       10.000000 r
+  clock reconvergence pessimism                       0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  library setup time                                  -0.024632  9.875368
+  data required time                                             9.875368
+  ------------------------------------------------------------------------------
+  data required time                                             9.875368
+  data arrival time                                              -2.858316
+  ------------------------------------------------------------------------------
+  slack (MET)                                                    7.017052
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_7_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  resetn (in)                                         0.000000   1.000000 f
+  U5715/ZN (INV_X1)                                   0.132635   1.132635 r
+  U6669/ZN (INV_X1)                                   0.091104   1.223738 f
+  U5692/ZN (AND2_X1)                                  0.066041   1.289780 f
+  U5641/Z (BUF_X1)                                    0.076705   1.366484 f
+  U5956/ZN (INV_X1)                                   0.125442   1.491927 r
+  U7376/ZN (NAND2_X1)                                 0.046328   1.538255 f
+  U7375/ZN (OAI21_X1)                                 0.033791   1.572047 r
+  U5391/Z (BUF_X1)                                    0.036337   1.608384 r
+  model_sram/Q[7] (adhd_sram_8192x14) <-              1.152963   2.761346 f
+  U7350/ZN (AOI22_X1)                                 0.067360   2.828707 r
+  U7349/ZN (INV_X1)                                   0.021054   2.849760 f
+  word0_reg_7_/D (DFF_X1)                             0.008556   2.858316 f
+  data arrival time                                              2.858316
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  word0_reg_7_/CK (DFF_X1)                                       10.000000 r
+  clock reconvergence pessimism                       0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  library setup time                                  -0.024632  9.875368
+  data required time                                             9.875368
+  ------------------------------------------------------------------------------
+  data required time                                             9.875368
+  data arrival time                                              -2.858316
+  ------------------------------------------------------------------------------
+  slack (MET)                                                    7.017052
+
+
+1

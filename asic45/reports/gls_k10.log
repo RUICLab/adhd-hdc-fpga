@@ -1,0 +1,2 @@
+ADHD PASS: all query bits, class scores, winners, reset/restart, busy guards, output backpressure
+ASIC ACTIVITY PASS K=10 queries=8192 reads=8192 cycles=8207 winner=8 score=4188 duration_ns=82070.000

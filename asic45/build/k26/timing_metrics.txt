@@ -1,0 +1,13 @@
+classes=26
+setup_slack_100mhz_ns=6.661455
+critical_data_arrival_ns=3.213913
+critical_startpoint=resetn
+critical_endpoint=word0_reg_0_/D
+register_to_register_data_arrival_ns=2.187137
+register_to_register_min_period_ns=2.312769
+sram_read_path_arrival_ns=3.213913
+hold_slack_100mhz_ns=0.000862
+min_period_with_uncertainty_ns=3.339545
+fmax_mhz=299.441989852
+fmax_setup_slack_ns=0.000999
+sram_cycle_limit_ns=1.1011

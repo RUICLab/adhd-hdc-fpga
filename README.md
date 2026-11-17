@@ -89,3 +89,12 @@ See [results and limitations](docs/RESULTS.md) before using these numbers.
 The repository contains technical documentation and results, with no
 manuscript files or generated vendor IP/binaries. Code is released under the
 [MIT license](LICENSE).
+
+## 45-nm ASIC estimates
+
+The [HDC ASIC study](asic45/README.md) includes the same Gray-code backend,
+synthesis and power scripts, original verification fixtures, mapped netlists,
+and [results with assumptions](asic45/RESULTS.md). At 100 MHz the estimated
+energy is 250.14 nJ/inference for K=10 and 296.98 nJ/inference for K=26.
+These are pre-layout Nangate45/CACTI estimates, not measured ASIC energy.
+No sensor implementation is included.

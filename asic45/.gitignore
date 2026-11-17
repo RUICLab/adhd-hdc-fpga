@@ -1,0 +1,12 @@
+tools/
+vendor/*.lib
+vendor/*.v
+vendor/*.db
+__pycache__/
+*.pyc
+build/*/sim/*.vcd
+build/*/sim/*.gz
+build/*/sim/csrc*/
+build/*/sim/check
+build/*/sim/activity
+*.ddc

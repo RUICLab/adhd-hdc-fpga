@@ -1,0 +1,3 @@
+read_lib vendor/NangateOpenCellLibrary_typical.lib
+write_lib NangateOpenCellLibrary -format db -output vendor/NangateOpenCellLibrary_typical.db
+exit

@@ -1,0 +1,12 @@
+{
+  "classes": 26,
+  "original_start_ps": 84155001,
+  "last_recorded_offset_ps": 82229999,
+  "duration_ps": 82230000,
+  "duration_ns": 82230.0,
+  "clock_edges": 16446,
+  "clock_period_ns": 10,
+  "recording": "zero delay; no SDF; one board fixture case-2 inference; input loading excluded",
+  "raw_vcd_sha256": "7300c8b7f39b475d5d90382c834a0f5213604ae908ec0a5d29e3afcade7b28bd",
+  "rebased_vcd_sha256": "0476c988fddfccc6ea212e4ab4e46ac5de701e8380d9a2ed08f708fe9228440c"
+}

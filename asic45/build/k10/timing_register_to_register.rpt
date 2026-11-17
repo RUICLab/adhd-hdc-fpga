@@ -1,0 +1,200 @@
+****************************************
+Report : timing
+	-path_type full_clock_expanded
+	-delay_type max
+	-slack_lesser_than 1000000.000000
+	-max_paths 3
+	-sort_by slack
+Design : adhd_hdc
+Version: X-2025.06-SP2
+Date   : Tue Nov 17 11:43:42 2026
+****************************************
+
+
+  Startpoint: cycles_reg_0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cycles_reg_31_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  cycles_reg_0_/CK (DFF_X1)                           0.000000   0.000000 r
+  cycles_reg_0_/Q (DFF_X1)                            0.118512   0.118512 r
+  add_132_S2/U1_1_1/CO (HA_X1)                        0.073182   0.191694 r
+  add_132_S2/U1_1_2/CO (HA_X1)                        0.061255   0.252949 r
+  add_132_S2/U1_1_3/CO (HA_X1)                        0.061243   0.314192 r
+  add_132_S2/U1_1_4/CO (HA_X1)                        0.061243   0.375435 r
+  add_132_S2/U1_1_5/CO (HA_X1)                        0.061243   0.436679 r
+  add_132_S2/U1_1_6/CO (HA_X1)                        0.061243   0.497922 r
+  add_132_S2/U1_1_7/CO (HA_X1)                        0.061243   0.559165 r
+  add_132_S2/U1_1_8/CO (HA_X1)                        0.061243   0.620409 r
+  add_132_S2/U1_1_9/CO (HA_X1)                        0.061243   0.681652 r
+  add_132_S2/U1_1_10/CO (HA_X1)                       0.061243   0.742895 r
+  add_132_S2/U1_1_11/CO (HA_X1)                       0.061243   0.804138 r
+  add_132_S2/U1_1_12/CO (HA_X1)                       0.061243   0.865382 r
+  add_132_S2/U1_1_13/CO (HA_X1)                       0.061243   0.926625 r
+  add_132_S2/U1_1_14/CO (HA_X1)                       0.061243   0.987868 r
+  add_132_S2/U1_1_15/CO (HA_X1)                       0.061243   1.049112 r
+  add_132_S2/U1_1_16/CO (HA_X1)                       0.061243   1.110355 r
+  add_132_S2/U1_1_17/CO (HA_X1)                       0.061243   1.171598 r
+  add_132_S2/U1_1_18/CO (HA_X1)                       0.061243   1.232841 r
+  add_132_S2/U1_1_19/CO (HA_X1)                       0.061243   1.294085 r
+  add_132_S2/U1_1_20/CO (HA_X1)                       0.061243   1.355328 r
+  add_132_S2/U1_1_21/CO (HA_X1)                       0.061243   1.416571 r
+  add_132_S2/U1_1_22/CO (HA_X1)                       0.061243   1.477815 r
+  add_132_S2/U1_1_23/CO (HA_X1)                       0.061243   1.539058 r
+  add_132_S2/U1_1_24/CO (HA_X1)                       0.061243   1.600301 r
+  add_132_S2/U1_1_25/CO (HA_X1)                       0.061243   1.661545 r
+  add_132_S2/U1_1_26/CO (HA_X1)                       0.061243   1.722788 r
+  add_132_S2/U1_1_27/CO (HA_X1)                       0.061243   1.784031 r
+  add_132_S2/U1_1_28/CO (HA_X1)                       0.061243   1.845275 r
+  add_132_S2/U1_1_29/CO (HA_X1)                       0.061243   1.906518 r
+  add_132_S2/U1_1_30/CO (HA_X1)                       0.057880   1.964398 r
+  add_132_S2/U1/Z (XOR2_X1)                           0.064113   2.028511 r
+  U8866/ZN (AOI22_X1)                                 0.030487   2.058997 f
+  U8865/ZN (INV_X1)                                   0.029088   2.088085 r
+  cycles_reg_31_/D (DFF_X1)                           0.009042   2.097127 r
+  data arrival time                                              2.097127
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  cycles_reg_31_/CK (DFF_X1)                                     10.000000 r
+  clock reconvergence pessimism                       0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  library setup time                                  -0.026819  9.873181
+  data required time                                             9.873181
+  ------------------------------------------------------------------------------
+  data required time                                             9.873181
+  data arrival time                                              -2.097127
+  ------------------------------------------------------------------------------
+  slack (MET)                                                    7.776054
+
+
+  Startpoint: cycles_reg_0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cycles_reg_30_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  cycles_reg_0_/CK (DFF_X1)                           0.000000   0.000000 r
+  cycles_reg_0_/Q (DFF_X1)                            0.118512   0.118512 r
+  add_132_S2/U1_1_1/CO (HA_X1)                        0.073182   0.191694 r
+  add_132_S2/U1_1_2/CO (HA_X1)                        0.061255   0.252949 r
+  add_132_S2/U1_1_3/CO (HA_X1)                        0.061243   0.314192 r
+  add_132_S2/U1_1_4/CO (HA_X1)                        0.061243   0.375435 r
+  add_132_S2/U1_1_5/CO (HA_X1)                        0.061243   0.436679 r
+  add_132_S2/U1_1_6/CO (HA_X1)                        0.061243   0.497922 r
+  add_132_S2/U1_1_7/CO (HA_X1)                        0.061243   0.559165 r
+  add_132_S2/U1_1_8/CO (HA_X1)                        0.061243   0.620409 r
+  add_132_S2/U1_1_9/CO (HA_X1)                        0.061243   0.681652 r
+  add_132_S2/U1_1_10/CO (HA_X1)                       0.061243   0.742895 r
+  add_132_S2/U1_1_11/CO (HA_X1)                       0.061243   0.804139 r
+  add_132_S2/U1_1_12/CO (HA_X1)                       0.061243   0.865382 r
+  add_132_S2/U1_1_13/CO (HA_X1)                       0.061243   0.926625 r
+  add_132_S2/U1_1_14/CO (HA_X1)                       0.061243   0.987868 r
+  add_132_S2/U1_1_15/CO (HA_X1)                       0.061243   1.049112 r
+  add_132_S2/U1_1_16/CO (HA_X1)                       0.061243   1.110355 r
+  add_132_S2/U1_1_17/CO (HA_X1)                       0.061243   1.171598 r
+  add_132_S2/U1_1_18/CO (HA_X1)                       0.061243   1.232842 r
+  add_132_S2/U1_1_19/CO (HA_X1)                       0.061243   1.294085 r
+  add_132_S2/U1_1_20/CO (HA_X1)                       0.061243   1.355328 r
+  add_132_S2/U1_1_21/CO (HA_X1)                       0.061243   1.416572 r
+  add_132_S2/U1_1_22/CO (HA_X1)                       0.061243   1.477815 r
+  add_132_S2/U1_1_23/CO (HA_X1)                       0.061243   1.539058 r
+  add_132_S2/U1_1_24/CO (HA_X1)                       0.061243   1.600302 r
+  add_132_S2/U1_1_25/CO (HA_X1)                       0.061243   1.661545 r
+  add_132_S2/U1_1_26/CO (HA_X1)                       0.061243   1.722788 r
+  add_132_S2/U1_1_27/CO (HA_X1)                       0.061243   1.784031 r
+  add_132_S2/U1_1_28/CO (HA_X1)                       0.061243   1.845275 r
+  add_132_S2/U1_1_29/CO (HA_X1)                       0.061243   1.906518 r
+  add_132_S2/U1_1_30/S (HA_X1)                        0.070792   1.977310 r
+  U8852/ZN (AOI22_X1)                                 0.030505   2.007815 f
+  U8851/ZN (INV_X1)                                   0.029088   2.036903 r
+  cycles_reg_30_/D (DFF_X1)                           0.009042   2.045945 r
+  data arrival time                                              2.045945
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  cycles_reg_30_/CK (DFF_X1)                                     10.000000 r
+  clock reconvergence pessimism                       0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  library setup time                                  -0.026819  9.873181
+  data required time                                             9.873181
+  ------------------------------------------------------------------------------
+  data required time                                             9.873181
+  data arrival time                                              -2.045945
+  ------------------------------------------------------------------------------
+  slack (MET)                                                    7.827237
+
+
+  Startpoint: cycles_reg_0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cycles_reg_29_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  cycles_reg_0_/CK (DFF_X1)                           0.000000   0.000000 r
+  cycles_reg_0_/Q (DFF_X1)                            0.118512   0.118512 r
+  add_132_S2/U1_1_1/CO (HA_X1)                        0.073182   0.191694 r
+  add_132_S2/U1_1_2/CO (HA_X1)                        0.061255   0.252949 r
+  add_132_S2/U1_1_3/CO (HA_X1)                        0.061243   0.314192 r
+  add_132_S2/U1_1_4/CO (HA_X1)                        0.061243   0.375435 r
+  add_132_S2/U1_1_5/CO (HA_X1)                        0.061243   0.436679 r
+  add_132_S2/U1_1_6/CO (HA_X1)                        0.061243   0.497922 r
+  add_132_S2/U1_1_7/CO (HA_X1)                        0.061243   0.559165 r
+  add_132_S2/U1_1_8/CO (HA_X1)                        0.061243   0.620409 r
+  add_132_S2/U1_1_9/CO (HA_X1)                        0.061243   0.681652 r
+  add_132_S2/U1_1_10/CO (HA_X1)                       0.061243   0.742895 r
+  add_132_S2/U1_1_11/CO (HA_X1)                       0.061243   0.804139 r
+  add_132_S2/U1_1_12/CO (HA_X1)                       0.061243   0.865382 r
+  add_132_S2/U1_1_13/CO (HA_X1)                       0.061243   0.926625 r
+  add_132_S2/U1_1_14/CO (HA_X1)                       0.061243   0.987868 r
+  add_132_S2/U1_1_15/CO (HA_X1)                       0.061243   1.049112 r
+  add_132_S2/U1_1_16/CO (HA_X1)                       0.061243   1.110355 r
+  add_132_S2/U1_1_17/CO (HA_X1)                       0.061243   1.171598 r
+  add_132_S2/U1_1_18/CO (HA_X1)                       0.061243   1.232842 r
+  add_132_S2/U1_1_19/CO (HA_X1)                       0.061243   1.294085 r
+  add_132_S2/U1_1_20/CO (HA_X1)                       0.061243   1.355328 r
+  add_132_S2/U1_1_21/CO (HA_X1)                       0.061243   1.416572 r
+  add_132_S2/U1_1_22/CO (HA_X1)                       0.061243   1.477815 r
+  add_132_S2/U1_1_23/CO (HA_X1)                       0.061243   1.539058 r
+  add_132_S2/U1_1_24/CO (HA_X1)                       0.061243   1.600302 r
+  add_132_S2/U1_1_25/CO (HA_X1)                       0.061243   1.661545 r
+  add_132_S2/U1_1_26/CO (HA_X1)                       0.061243   1.722788 r
+  add_132_S2/U1_1_27/CO (HA_X1)                       0.061243   1.784031 r
+  add_132_S2/U1_1_28/CO (HA_X1)                       0.061243   1.845275 r
+  add_132_S2/U1_1_29/S (HA_X1)                        0.070792   1.916067 r
+  U8854/ZN (AOI22_X1)                                 0.030505   1.946572 f
+  U8853/ZN (INV_X1)                                   0.029088   1.975660 r
+  cycles_reg_29_/D (DFF_X1)                           0.009042   1.984702 r
+  data arrival time                                              1.984702
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  cycles_reg_29_/CK (DFF_X1)                                     10.000000 r
+  clock reconvergence pessimism                       0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  library setup time                                  -0.026819  9.873181
+  data required time                                             9.873181
+  ------------------------------------------------------------------------------
+  data required time                                             9.873181
+  data arrival time                                              -1.984702
+  ------------------------------------------------------------------------------
+  slack (MET)                                                    7.888480
+
+
+1

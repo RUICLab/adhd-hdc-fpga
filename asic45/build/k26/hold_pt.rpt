@@ -1,0 +1,170 @@
+****************************************
+Report : timing
+	-path_type full_clock_expanded
+	-delay_type min
+	-slack_lesser_than 1000000.000000
+	-max_paths 5
+	-sort_by slack
+Design : adhd_hdc
+Version: X-2025.06-SP2
+Date   : Tue Nov 17 11:43:47 2026
+****************************************
+
+
+  Startpoint: best_score_reg_12_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: result_score_reg_12_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  best_score_reg_12_/CK (DFF_X1)                      0.000000   0.000000 r
+  best_score_reg_12_/QN (DFF_X1)                      0.082697   0.082697 f
+  U10637/ZN (OAI222_X1)                               0.042213   0.124910 r
+  result_score_reg_12_/D (DFF_X1)                     0.009042   0.133952 r
+  data arrival time                                              0.133952
+
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  result_score_reg_12_/CK (DFF_X1)                               0.000000 r
+  clock reconvergence pessimism                       0.000000   0.000000
+  clock uncertainty                                   0.100000   0.100000
+  library hold time                                   0.033090   0.133090
+  data required time                                             0.133090
+  ------------------------------------------------------------------------------
+  data required time                                             0.133090
+  data arrival time                                              -0.133952
+  ------------------------------------------------------------------------------
+  slack (MET)                                                    0.000862
+
+
+  Startpoint: hstate_reg_103_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: hstate_reg_103_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock core_clk (rise edge)           0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  hstate_reg_103_/CK (DFF_X1)          0.000000   0.000000 r
+  hstate_reg_103_/QN (DFF_X1)          0.077771   0.077771 r
+  U8198/ZN (OAI22_X1)                  0.026420   0.104191 f
+  hstate_reg_103_/D (DFF_X1)           0.008556   0.112747 f
+  data arrival time                               0.112747
+
+  clock core_clk (rise edge)           0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  hstate_reg_103_/CK (DFF_X1)                     0.000000 r
+  clock reconvergence pessimism        0.000000   0.000000
+  clock uncertainty                    0.100000   0.100000
+  library hold time                    0.010922   0.110922
+  data required time                              0.110922
+  ---------------------------------------------------------------
+  data required time                              0.110922
+  data arrival time                               -0.112747
+  ---------------------------------------------------------------
+  slack (MET)                                     0.001825
+
+
+  Startpoint: hstate_reg_167_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: hstate_reg_167_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock core_clk (rise edge)           0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  hstate_reg_167_/CK (DFF_X1)          0.000000   0.000000 r
+  hstate_reg_167_/QN (DFF_X1)          0.077771   0.077771 r
+  U8326/ZN (OAI22_X1)                  0.026420   0.104191 f
+  hstate_reg_167_/D (DFF_X1)           0.008556   0.112747 f
+  data arrival time                               0.112747
+
+  clock core_clk (rise edge)           0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  hstate_reg_167_/CK (DFF_X1)                     0.000000 r
+  clock reconvergence pessimism        0.000000   0.000000
+  clock uncertainty                    0.100000   0.100000
+  library hold time                    0.010922   0.110922
+  data required time                              0.110922
+  ---------------------------------------------------------------
+  data required time                              0.110922
+  data arrival time                               -0.112747
+  ---------------------------------------------------------------
+  slack (MET)                                     0.001825
+
+
+  Startpoint: hstate_reg_66_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: hstate_reg_66_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock core_clk (rise edge)           0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  hstate_reg_66_/CK (DFF_X1)           0.000000   0.000000 r
+  hstate_reg_66_/QN (DFF_X1)           0.077771   0.077771 r
+  U8194/ZN (OAI22_X1)                  0.026420   0.104191 f
+  hstate_reg_66_/D (DFF_X1)            0.008556   0.112747 f
+  data arrival time                               0.112747
+
+  clock core_clk (rise edge)           0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  hstate_reg_66_/CK (DFF_X1)                      0.000000 r
+  clock reconvergence pessimism        0.000000   0.000000
+  clock uncertainty                    0.100000   0.100000
+  library hold time                    0.010922   0.110922
+  data required time                              0.110922
+  ---------------------------------------------------------------
+  data required time                              0.110922
+  data arrival time                               -0.112747
+  ---------------------------------------------------------------
+  slack (MET)                                     0.001825
+
+
+  Startpoint: hstate_reg_46_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: hstate_reg_46_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock core_clk (rise edge)           0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  hstate_reg_46_/CK (DFF_X1)           0.000000   0.000000 r
+  hstate_reg_46_/QN (DFF_X1)           0.077771   0.077771 r
+  U8252/ZN (OAI22_X1)                  0.026420   0.104191 f
+  hstate_reg_46_/D (DFF_X1)            0.008556   0.112747 f
+  data arrival time                               0.112747
+
+  clock core_clk (rise edge)           0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  hstate_reg_46_/CK (DFF_X1)                      0.000000 r
+  clock reconvergence pessimism        0.000000   0.000000
+  clock uncertainty                    0.100000   0.100000
+  library hold time                    0.010922   0.110922
+  data required time                              0.110922
+  ---------------------------------------------------------------
+  data required time                              0.110922
+  data arrival time                               -0.112747
+  ---------------------------------------------------------------
+  slack (MET)                                     0.001825
+
+Warning: report_timing has satisfied the max_paths criteria. There are 1813 further endpoints which have paths of interest with slack less than 1000000.000000 that were not considered when generating this report. (UITE-502)
+
+1

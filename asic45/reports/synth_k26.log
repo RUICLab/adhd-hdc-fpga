@@ -1,0 +1,930 @@
+Tool-output excerpt: Design Compiler X-2025.06-SP3
+
+set k $env(CLASSES)
+26
+if {$k ni {10 26}} {error "CLASSES must be 10 or 26"}
+set out build/k$k
+build/k26
+file mkdir $out
+define_design_lib WORK -path $out/WORK
+1
+set_app_var search_path [concat $search_path [list . vendor]]
+set_app_var target_library [list vendor/NangateOpenCellLibrary_typical.db]
+vendor/NangateOpenCellLibrary_typical.db
+set_app_var link_library [concat [list *] $target_library [list vendor/sram_k${k}.db]]
+* vendor/NangateOpenCellLibrary_typical.db vendor/sram_k26.db
+set_app_var auto_wire_load_selection false
+false
+analyze -format sverilog $out/adhd_hdc_asic.sv
+Running PRESTO HDLC
+Compiling source file ./build/k26/adhd_hdc_asic.sv
+Presto compilation completed successfully.
+Loading db file 'vendor/NangateOpenCellLibrary_typical.db'
+Loading db file 'vendor/sram_k26.db'
+1
+elaborate adhd_hdc -parameters "DIM_BITS=13,CLASSES=$k"
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'adhd_sram_k26'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./build/k26/adhd_hdc_asic.sv:53: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./build/k26/adhd_hdc_asic.sv:96: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./build/k26/adhd_hdc_asic.sv:102: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./build/k26/adhd_hdc_asic.sv:142: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process in routine 'adhd_hdc_DIM_BITS13_CLASSES26' in file
+	 ./build/k26/adhd_hdc_asic.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      word0_reg      | Flip-flop |  30   |  Y  | N  | None  | None  | N  |  82  |
+|     proto4_reg      | Flip-flop |  26   |  Y  | N  | None  | None  | N  |  85  |
+|      state_reg      | Flip-flop |   3   |  Y  | N  | None  | None  | N  |  85  |
+|        t_reg        | Flip-flop |  13   |  Y  | N  | None  | None  | N  |  85  |
+|     hstate_reg      | Flip-flop |  196  |  Y  | N  | None  | None  | N  |  85  |
+|       h0_reg        | Flip-flop |  196  |  Y  | N  | None  | None  | N  |  85  |
+|   valid_pipe_reg    | Flip-flop |   5   |  Y  | N  | None  | None  | N  |  85  |
+|    last_pipe_reg    | Flip-flop |   5   |  Y  | N  | None  | None  | N  |  85  |
+|     cycles_reg      | Flip-flop |  32   |  Y  | N  | None  | None  | N  |  85  |
+|  result_class_reg   | Flip-flop |   5   |  Y  | N  | None  | None  | N  |  85  |
+|  result_score_reg   | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  85  |
+|   best_score_reg    | Flip-flop |  14   |  Y  | N  | None  | None  | N  |  85  |
+|   best_class_reg    | Flip-flop |   5   |  Y  | N  | None  | None  | N  |  85  |
+|   scan_index_reg    | Flip-flop |   5   |  Y  | N  | None  | None  | N  |  85  |
+|     scores_reg      | Flip-flop |  364  |  Y  | N  | None  | None  | N  |  85  |
+|    features_reg     | Flip-flop |  392  |  Y  | N  | None  | None  | N  |  85  |
+|    addr_pipe_reg    | Flip-flop |  65   |  Y  | N  | None  | None  | N  |  85  |
+|      sum1_reg       | Flip-flop |  192  |  Y  | N  | None  | None  | N  |  85  |
+|     proto1_reg      | Flip-flop |  26   |  Y  | N  | None  | None  | N  |  85  |
+|      sum2_reg       | Flip-flop |  80   |  Y  | N  | None  | None  | N  |  85  |
+|     proto2_reg      | Flip-flop |  26   |  Y  | N  | None  | None  | N  |  85  |
+|      sum3_reg       | Flip-flop |  28   |  Y  | N  | None  | None  | N  |  85  |
+|     proto3_reg      | Flip-flop |  26   |  Y  | N  | None  | None  | N  |  85  |
+|       q4_reg        | Flip-flop |   1   |  N  | N  | None  | None  | N  |  85  |
+==================================================================================
+Statistics for MUX_OPs
+======================================================================
+|         block name/line          | Inputs | Outputs | # sel inputs |
+======================================================================
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+| adhd_hdc_DIM_BITS13_CLASSES26/63 |   32   |    1    |      5       |
+======================================================================
+Presto compilation completed successfully. (adhd_hdc_DIM_BITS13_CLASSES26)
+Module: adhd_hdc_DIM_BITS13_CLASSES26, Ports: 130, Input: 61, Output: 69, Inout: 0
+Module: adhd_hdc_DIM_BITS13_CLASSES26, Registers: 1749, Async set/reset: 0, Sync set/reset: 0
+Information: Module adhd_hdc_DIM_BITS13_CLASSES26 report end. (ELAB-965)
+Elaborated 1 design.
+Current design is now 'adhd_hdc_DIM_BITS13_CLASSES26'.
+1
+rename_design [get_object_name [current_design]] adhd_hdc
+Current design is 'adhd_hdc_DIM_BITS13_CLASSES26'.
+Information: Renaming design adhd_hdc_DIM_BITS13_CLASSES26.db:adhd_hdc_DIM_BITS13_CLASSES26 to adhd_hdc_DIM_BITS13_CLASSES26.db:adhd_hdc. (UIMG-45)
+Current design is 'adhd_hdc'.
+1
+current_design adhd_hdc
+Current design is 'adhd_hdc'.
+{adhd_hdc}
+link
+
+  Linking design 'adhd_hdc'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  adhd_hdc                    adhd_hdc_DIM_BITS13_CLASSES26.db
+  NangateOpenCellLibrary (library) vendor/NangateOpenCellLibrary_typical.db
+  adhd_sram_k26 (library)     vendor/sram_k26.db
+
+Information: Summary of messages issued during linking: (LINK-1806)
+No messages were issued during linking.
+1
+set_dont_touch [get_cells model_sram] true
+1
+set_operating_conditions typical -library NangateOpenCellLibrary
+Using operating conditions 'typical' found in library 'NangateOpenCellLibrary'.
+1
+source constraints/core_100mhz.sdc
+Current design is 'adhd_hdc'.
+1
+set_fix_hold [all_clocks]
+1
+set_fix_multiple_port_nets -all -buffer_constants
+1
+redirect $out/check_before.rpt {check_design}
+compile -map_effort high -area_effort high
+CPU Load: 1%, Ram Free: 43 GB, Swap Free: 31 GB, Work Disk Free: 755 GB, Tmp Disk Free: 313 GB
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | X-2025.06-DWBB_202506.3 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 13293                                  |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 1750                                   |
+| Macro Count                                             | 0                                      |
+| Pad Count                                               | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 3030                                   |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with Target Library Subset (with clock_path)     | false  (false )                        |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+
+Information: There are 11 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'adhd_hdc'
+Information: The register 'sum1_reg[49][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[49][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[49][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[50][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[50][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[50][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[51][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[51][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[51][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[52][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[52][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[52][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[53][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[53][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[53][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[54][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[54][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[54][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[55][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[55][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[55][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[56][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[56][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[56][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[57][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[57][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[57][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[58][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[58][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[58][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[59][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[59][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[59][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[60][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[60][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[60][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[61][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[61][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[61][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[62][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[62][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[62][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[63][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[63][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum1_reg[63][0]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+Module: DW01_inc_width5, Ports: 10, Input: 5, Output: 5, Inout: 0
+Module: DW01_inc_width5, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'adhd_hdc_DW01_inc_0'
+Module: DW01_inc_width32, Ports: 64, Input: 32, Output: 32, Inout: 0
+Module: DW01_inc_width32, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'adhd_hdc_DW01_inc_1'
+Module: DW01_add_width14, Ports: 44, Input: 29, Output: 15, Inout: 0
+Module: DW01_add_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'adhd_hdc_DW01_add_0'
+  Processing 'adhd_hdc_DW01_add_1'
+  Processing 'adhd_hdc_DW01_add_2'
+  Processing 'adhd_hdc_DW01_add_3'
+  Processing 'adhd_hdc_DW01_add_4'
+  Processing 'adhd_hdc_DW01_add_5'
+  Processing 'adhd_hdc_DW01_add_6'
+  Processing 'adhd_hdc_DW01_add_7'
+  Processing 'adhd_hdc_DW01_add_8'
+  Processing 'adhd_hdc_DW01_add_9'
+  Processing 'adhd_hdc_DW01_add_10'
+  Processing 'adhd_hdc_DW01_add_11'
+  Processing 'adhd_hdc_DW01_add_12'
+  Processing 'adhd_hdc_DW01_add_13'
+  Processing 'adhd_hdc_DW01_add_14'
+  Processing 'adhd_hdc_DW01_add_15'
+  Processing 'adhd_hdc_DW01_add_16'
+  Processing 'adhd_hdc_DW01_add_17'
+  Processing 'adhd_hdc_DW01_add_18'
+  Processing 'adhd_hdc_DW01_add_19'
+  Processing 'adhd_hdc_DW01_add_20'
+  Processing 'adhd_hdc_DW01_add_21'
+  Processing 'adhd_hdc_DW01_add_22'
+  Processing 'adhd_hdc_DW01_add_23'
+  Processing 'adhd_hdc_DW01_add_24'
+  Processing 'adhd_hdc_DW01_add_25'
+Module: DW01_cmp2_width9, Ports: 22, Input: 20, Output: 2, Inout: 0
+Module: DW01_cmp2_width9, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'adhd_hdc_DW01_cmp2_0'
+Module: DW01_cmp2_width8, Ports: 20, Input: 18, Output: 2, Inout: 0
+Module: DW01_cmp2_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'adhd_hdc_DW01_cmp2_1'
+Module: DW01_cmp2_width14, Ports: 32, Input: 30, Output: 2, Inout: 0
+Module: DW01_cmp2_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'adhd_hdc_DW01_cmp2_2'
+Module: DW01_inc_width13, Ports: 26, Input: 13, Output: 13, Inout: 0
+Module: DW01_inc_width13, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'adhd_hdc_DW01_inc_2'
+Module: DW01_add_width4, Ports: 14, Input: 9, Output: 5, Inout: 0
+Module: DW01_add_width4, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_NAND2, Ports: 3, Input: 2, Output: 1, Inout: 0
+Module: DW01_NAND2, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_NAND2'
+  Processing 'DW01_NAND2'
+  Building model 'DW01_add_width4' (rpl)
+  Processing 'DW01_add_width4'
+Module: DW01_add_width4, Ports: 14, Input: 9, Output: 5, Inout: 0
+Module: DW01_add_width4, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width4' (cla)
+  Processing 'DW01_add_width4'
+Module: DW01_add_width5, Ports: 17, Input: 11, Output: 6, Inout: 0
+Module: DW01_add_width5, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width5' (rpl)
+  Processing 'DW01_add_width5'
+Module: DW01_add_width5, Ports: 17, Input: 11, Output: 6, Inout: 0
+Module: DW01_add_width5, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width5' (cla)
+  Processing 'DW01_add_width5'
+Module: DW01_add_width8, Ports: 26, Input: 17, Output: 9, Inout: 0
+Module: DW01_add_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width8' (rpl)
+  Processing 'DW01_add_width8'
+Module: DW01_add_width8, Ports: 26, Input: 17, Output: 9, Inout: 0
+Module: DW01_add_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width8' (cla)
+  Processing 'DW01_add_width8'
+Module: DW01_add_width9, Ports: 29, Input: 19, Output: 10, Inout: 0
+Module: DW01_add_width9, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width9' (rpl)
+  Processing 'DW01_add_width9'
+Module: DW01_add_width9, Ports: 29, Input: 19, Output: 10, Inout: 0
+Module: DW01_add_width9, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width9' (cla)
+  Processing 'DW01_add_width9'
+Module: DW01_add_width6, Ports: 20, Input: 13, Output: 7, Inout: 0
+Module: DW01_add_width6, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width6' (rpl)
+  Processing 'DW01_add_width6'
+Module: DW01_add_width6, Ports: 20, Input: 13, Output: 7, Inout: 0
+Module: DW01_add_width6, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width6' (cla)
+  Processing 'DW01_add_width6'
+Module: DW01_add_width7, Ports: 23, Input: 15, Output: 8, Inout: 0
+Module: DW01_add_width7, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width7' (rpl)
+  Processing 'DW01_add_width7'
+Module: DW01_add_width7, Ports: 23, Input: 15, Output: 8, Inout: 0
+Module: DW01_add_width7, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width7' (cla)
+  Processing 'DW01_add_width7'
+Module: DW01_add_width2, Ports: 8, Input: 5, Output: 3, Inout: 0
+Module: DW01_add_width2, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width2' (rpl)
+  Processing 'DW01_add_width2'
+Module: DW01_add_width2, Ports: 8, Input: 5, Output: 3, Inout: 0
+Module: DW01_add_width2, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width2' (cla)
+  Processing 'DW01_add_width2'
+Module: DW01_add_width3, Ports: 11, Input: 7, Output: 4, Inout: 0
+Module: DW01_add_width3, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width3' (rpl)
+  Processing 'DW01_add_width3'
+Module: DW01_add_width3, Ports: 11, Input: 7, Output: 4, Inout: 0
+Module: DW01_add_width3, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_add_width3' (cla)
+  Processing 'DW01_add_width3'
+  Processing 'adhd_hdc_DW01_add_26'
+  Processing 'adhd_hdc_DW01_add_27'
+  Processing 'adhd_hdc_DW01_add_28'
+  Processing 'adhd_hdc_DW01_add_29'
+  Processing 'adhd_hdc_DW01_add_30'
+  Processing 'adhd_hdc_DW01_add_31'
+  Processing 'adhd_hdc_DW01_add_32'
+  Processing 'adhd_hdc_DW01_add_33'
+  Processing 'adhd_hdc_DW01_add_34'
+  Processing 'adhd_hdc_DW01_add_35'
+  Processing 'adhd_hdc_DW01_add_36'
+  Processing 'adhd_hdc_DW01_add_37'
+  Processing 'adhd_hdc_DW01_add_38'
+  Processing 'adhd_hdc_DW01_add_39'
+  Processing 'adhd_hdc_DW01_add_40'
+  Processing 'adhd_hdc_DW01_add_41'
+  Processing 'adhd_hdc_DW01_add_42'
+  Processing 'adhd_hdc_DW01_add_43'
+  Processing 'adhd_hdc_DW01_add_44'
+  Processing 'adhd_hdc_DW01_add_45'
+  Processing 'adhd_hdc_DW01_add_46'
+  Processing 'adhd_hdc_DW01_add_47'
+  Processing 'adhd_hdc_DW01_add_48'
+  Processing 'adhd_hdc_DW01_add_49'
+  Processing 'adhd_hdc_DW01_add_50'
+  Processing 'adhd_hdc_DW01_add_51'
+  Processing 'adhd_hdc_DW01_add_52'
+  Processing 'adhd_hdc_DW01_add_53'
+  Processing 'adhd_hdc_DW01_add_54'
+  Processing 'adhd_hdc_DW01_add_55'
+  Processing 'adhd_hdc_DW01_add_56'
+  Processing 'adhd_hdc_DW01_add_57'
+  Processing 'adhd_hdc_DW01_add_58'
+  Processing 'adhd_hdc_DW01_add_59'
+  Processing 'adhd_hdc_DW01_add_60'
+  Processing 'adhd_hdc_DW01_add_61'
+  Processing 'adhd_hdc_DW01_add_62'
+  Processing 'adhd_hdc_DW01_add_63'
+  Processing 'adhd_hdc_DW01_add_64'
+  Processing 'adhd_hdc_DW01_add_65'
+  Processing 'adhd_hdc_DW01_add_66'
+  Processing 'adhd_hdc_DW01_add_67'
+  Processing 'adhd_hdc_DW01_add_68'
+  Processing 'adhd_hdc_DW01_add_69'
+  Processing 'adhd_hdc_DW01_add_70'
+  Processing 'adhd_hdc_DW01_add_71'
+  Processing 'adhd_hdc_DW01_add_72'
+  Processing 'adhd_hdc_DW01_add_73'
+  Processing 'adhd_hdc_DW01_add_74'
+  Processing 'adhd_hdc_DW01_add_75'
+  Processing 'adhd_hdc_DW01_add_76'
+  Processing 'adhd_hdc_DW01_add_77'
+  Processing 'adhd_hdc_DW01_add_78'
+  Processing 'adhd_hdc_DW01_add_79'
+  Processing 'adhd_hdc_DW01_add_80'
+  Processing 'adhd_hdc_DW01_add_81'
+  Processing 'adhd_hdc_DW01_add_82'
+  Processing 'adhd_hdc_DW01_add_83'
+  Processing 'adhd_hdc_DW01_add_84'
+  Processing 'adhd_hdc_DW01_add_85'
+  Processing 'adhd_hdc_DW01_add_86'
+  Processing 'adhd_hdc_DW01_add_87'
+  Processing 'adhd_hdc_DW01_add_88'
+  Processing 'DW01_add_width3_DW01_add_89'
+  Processing 'DW01_add_width2_DW01_add_90'
+  Processing 'DW01_add_width3_DW01_add_91'
+  Processing 'DW01_add_width2_DW01_add_92'
+  Processing 'DW01_add_width3_DW01_add_93'
+  Processing 'DW01_add_width2_DW01_add_94'
+  Processing 'DW01_add_width3_DW01_add_95'
+  Processing 'DW01_add_width2_DW01_add_96'
+  Processing 'DW01_add_width3_DW01_add_97'
+  Processing 'DW01_add_width2_DW01_add_98'
+  Processing 'DW01_add_width3_DW01_add_99'
+  Processing 'DW01_add_width2_DW01_add_100'
+  Processing 'DW01_add_width3_DW01_add_101'
+  Processing 'DW01_add_width2_DW01_add_102'
+  Processing 'DW01_add_width3_DW01_add_103'
+  Processing 'DW01_add_width2_DW01_add_104'
+  Processing 'DW01_add_width3_DW01_add_105'
+  Processing 'DW01_add_width2_DW01_add_106'
+  Processing 'DW01_add_width3_DW01_add_107'
+  Processing 'DW01_add_width2_DW01_add_108'
+  Processing 'DW01_add_width3_DW01_add_109'
+  Processing 'DW01_add_width2_DW01_add_110'
+  Processing 'DW01_add_width3_DW01_add_111'
+  Processing 'DW01_add_width2_DW01_add_112'
+  Processing 'DW01_add_width3_DW01_add_113'
+  Processing 'DW01_add_width2_DW01_add_114'
+  Processing 'DW01_add_width3_DW01_add_115'
+  Processing 'DW01_add_width2_DW01_add_116'
+  Processing 'DW01_add_width3_DW01_add_117'
+  Processing 'DW01_add_width2_DW01_add_118'
+  Processing 'DW01_add_width3_DW01_add_119'
+  Processing 'DW01_add_width2_DW01_add_120'
+  Processing 'DW01_add_width3_DW01_add_121'
+  Processing 'DW01_add_width2_DW01_add_122'
+  Processing 'DW01_add_width3_DW01_add_123'
+  Processing 'DW01_add_width2_DW01_add_124'
+  Processing 'DW01_add_width3_DW01_add_125'
+  Processing 'DW01_add_width2_DW01_add_126'
+  Processing 'DW01_add_width3_DW01_add_127'
+  Processing 'DW01_add_width2_DW01_add_128'
+  Processing 'DW01_add_width3_DW01_add_129'
+  Processing 'DW01_add_width2_DW01_add_130'
+  Processing 'DW01_add_width3_DW01_add_131'
+  Processing 'DW01_add_width2_DW01_add_132'
+  Processing 'DW01_add_width3_DW01_add_133'
+  Processing 'DW01_add_width2_DW01_add_134'
+  Processing 'DW01_add_width3_DW01_add_135'
+  Processing 'DW01_add_width2_DW01_add_136'
+  Processing 'DW01_add_width3_DW01_add_137'
+  Processing 'DW01_add_width2_DW01_add_138'
+  Processing 'DW01_add_width3_DW01_add_139'
+  Processing 'DW01_add_width2_DW01_add_140'
+  Processing 'DW01_add_width3_DW01_add_141'
+  Processing 'DW01_add_width2_DW01_add_142'
+  Processing 'DW01_add_width3_DW01_add_143'
+  Processing 'DW01_add_width2_DW01_add_144'
+  Processing 'DW01_add_width3_DW01_add_145'
+  Processing 'DW01_add_width2_DW01_add_146'
+  Processing 'DW01_add_width3_DW01_add_147'
+  Processing 'DW01_add_width2_DW01_add_148'
+  Processing 'DW01_add_width3_DW01_add_149'
+  Processing 'DW01_add_width2_DW01_add_150'
+  Processing 'DW01_add_width3_DW01_add_151'
+  Processing 'DW01_add_width2_DW01_add_152'
+  Processing 'DW01_add_width3_DW01_add_153'
+  Processing 'DW01_add_width2_DW01_add_154'
+  Processing 'DW01_add_width3_DW01_add_155'
+  Processing 'DW01_add_width2_DW01_add_156'
+  Processing 'DW01_add_width3_DW01_add_157'
+  Processing 'DW01_add_width2_DW01_add_158'
+  Processing 'DW01_add_width3_DW01_add_159'
+  Processing 'DW01_add_width2_DW01_add_160'
+  Processing 'DW01_add_width3_DW01_add_161'
+  Processing 'DW01_add_width2_DW01_add_162'
+  Processing 'DW01_add_width3_DW01_add_163'
+  Processing 'DW01_add_width2_DW01_add_164'
+  Processing 'DW01_add_width3_DW01_add_165'
+  Processing 'DW01_add_width2_DW01_add_166'
+  Processing 'DW01_add_width3_DW01_add_167'
+  Processing 'DW01_add_width2_DW01_add_168'
+  Processing 'DW01_add_width3_DW01_add_169'
+  Processing 'DW01_add_width2_DW01_add_170'
+  Processing 'DW01_add_width3_DW01_add_171'
+  Processing 'DW01_add_width2_DW01_add_172'
+  Processing 'DW01_add_width3_DW01_add_173'
+  Processing 'DW01_add_width2_DW01_add_174'
+  Processing 'DW01_add_width3_DW01_add_175'
+  Processing 'DW01_add_width2_DW01_add_176'
+  Processing 'DW01_add_width3_DW01_add_177'
+  Processing 'DW01_add_width2_DW01_add_178'
+  Processing 'DW01_add_width3_DW01_add_179'
+  Processing 'DW01_add_width2_DW01_add_180'
+  Processing 'DW01_add_width3_DW01_add_181'
+  Processing 'DW01_add_width2_DW01_add_182'
+  Processing 'DW01_add_width3_DW01_add_183'
+  Processing 'DW01_add_width2_DW01_add_184'
+  Processing 'DW01_add_width3_DW01_add_185'
+  Processing 'DW01_add_width2_DW01_add_186'
+
+  Beginning Mapping Optimizations  (High effort)
+  -------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:06  133613.9      0.00       0.0       5.6                                0.00  
+    0:00:06  133613.9      0.00       0.0       5.6                                0.00  
+    0:00:06  133613.9      0.00       0.0       5.6                                0.00  
+    0:00:06  133613.9      0.00       0.0       5.6                                0.00  
+    0:00:06  133613.9      0.00       0.0       5.6                                0.00  
+    0:00:07  122756.3      0.00       0.0       0.0                                0.00  
+    0:00:07  122707.9      0.00       0.0       0.0                                0.00  
+    0:00:07  122707.9      0.00       0.0       0.0                                0.00  
+    0:00:07  122707.9      0.00       0.0       0.0                                0.00  
+    0:00:07  122707.9      0.00       0.0       0.0                                0.00  
+    0:00:07  122707.9      0.00       0.0       0.0                                0.00  
+    0:00:07  122707.9      0.00       0.0       0.0                                0.00  
+    0:00:07  122707.9      0.00       0.0       0.0                                0.00  
+    0:00:07  122707.9      0.00       0.0       0.0                                0.00  
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:07  122707.9      0.00       0.0       0.0                                0.00  
+    0:00:07  122707.9      0.00       0.0       0.0                                0.00  
+    0:00:07  122707.9      0.00       0.0       0.0                                0.00  
+    0:00:07  122707.9      0.00       0.0       0.0                                0.00  
+    0:00:07  122701.0      0.00       0.0       0.0                                0.00  
+
+
+  Beginning Design Rule Fixing  (min_path)
+  ----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:07  122701.0      0.00       0.0       0.0                               -2.89  
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:07  122701.0      0.00       0.0       0.0                               -2.89  
+    0:00:07  122701.0      0.00       0.0       0.0                               -2.89  
+    0:00:07  122007.3      0.00       0.0       0.0                               -2.89  
+    0:00:08  121908.6      0.00       0.0       0.0                               -2.88  
+    0:00:08  121856.5      0.00       0.0       0.0                               -2.88  
+    0:00:08  121829.1      0.00       0.0       0.0                               -2.88  
+    0:00:08  121823.7      0.00       0.0       0.0                               -2.88  
+    0:00:08  121818.7      0.00       0.0       0.0                               -2.88  
+    0:00:08  121818.7      0.00       0.0       0.0                               -2.88  
+    0:00:08  121818.7      0.00       0.0       0.0                               -2.88  
+    0:00:08  121812.6      0.00       0.0       0.0                               -2.88  
+    0:00:08  121812.6      0.00       0.0       0.0                               -2.88  
+    0:00:08  121812.6      0.00       0.0       0.0                               -2.88  
+    0:00:08  121812.6      0.00       0.0       0.0                               -2.88  
+    0:00:08  121812.6      0.00       0.0       0.0                               -2.88  
+    0:00:08  121812.6      0.00       0.0       0.0                               -2.88  
+    0:00:08  121871.6      0.00       0.0       0.0 model_sram/A[3]               -0.24  
+    0:00:08  121903.0      0.00       0.0       0.0                                0.00  
+Loading db file 'vendor/NangateOpenCellLibrary_typical.db'
+Loading db file 'vendor/sram_k26.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'adhd_hdc' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 1705 load(s), 1 driver(s)
+CPU Load: 1%, Ram Free: 43 GB, Swap Free: 31 GB, Work Disk Free: 755 GB, Tmp Disk Free: 313 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+compile -incremental_mapping -only_hold_time
+CPU Load: 1%, Ram Free: 43 GB, Swap Free: 31 GB, Work Disk Free: 755 GB, Tmp Disk Free: 313 GB
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 8640                                   |
+| Number of User Hierarchies                              | 7                                      |
+| Sequential Cell Count                                   | 1705                                   |
+| Macro Count                                             | 0                                      |
+| Pad Count                                               | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 1                                      |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with Target Library Subset (with clock_path)     | false  (false )                        |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+
+Information: There are 42 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Incremental)
+  -------------------------------
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:00  121903.0      0.00       0.0       0.0                                0.00  
+    0:00:00  121903.0      0.00       0.0       0.0                                0.00  
+    0:00:00  121903.0      0.00       0.0       0.0                                0.00  
+Loading db file 'vendor/NangateOpenCellLibrary_typical.db'
+Loading db file 'vendor/sram_k26.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'adhd_hdc' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 1705 load(s), 1 driver(s)
+CPU Load: 1%, Ram Free: 43 GB, Swap Free: 31 GB, Work Disk Free: 755 GB, Tmp Disk Free: 313 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+change_names -rules verilog -hierarchy
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+1
+redirect $out/area.rpt {report_area -hierarchy}
+redirect $out/references.rpt {report_reference -hierarchy}
+redirect $out/timing_dc.rpt {report_timing -max_paths 10 -transition_time -capacitance -nets}
+redirect $out/constraints.rpt {report_constraint -all_violators}
+redirect $out/check_after.rpt {check_design}
+write -format ddc -hierarchy -output $out/core.ddc
+Writing ddc file 'build/k26/core.ddc'.
+1
+write -format verilog -hierarchy -output $out/core_mapped.v
+Writing verilog file 'build/k26/core_mapped.v'.
+1
+write_sdc $out/core_mapped.sdc
+1
+set leaves [get_cells -hierarchical -filter "is_hierarchical == false"]
+{add_132_S2/U1_1_30 add_132_S2/U1_1_29 add_132_S2/U1_1_28 add_132_S2/U1_1_27 add_132_S2/U1_1_26 add_132_S2/U1_1_25 add_132_S2/U1_1_24 add_132_S2/U1_1_23 add_132_S2/U1_1_22 add_132_S2/U1_1_21 add_132_S2/U1_1_20 add_132_S2/U1_1_19 add_132_S2/U1_1_18 add_132_S2/U1_1_17 add_132_S2/U1_1_16 add_132_S2/U1_1_15 add_132_S2/U1_1_14 add_132_S2/U1_1_13 add_132_S2/U1_1_12 add_132_S2/U1_1_11 add_132_S2/U1_1_10 add_132_S2/U1_1_9 add_132_S2/U1_1_8 add_132_S2/U1_1_7 add_132_S2/U1_1_6 add_132_S2/U1_1_5 add_132_S2/U1_1_4 add_132_S2/U1_1_3 add_132_S2/U1_1_2 add_132_S2/U1_1_1 add_132_S2/U1 add_132_S2/U2 r1231/U1_1_11 r1231/U1_1_10 r1231/U1_1_9 r1231/U1_1_8 r1231/U1_1_7 r1231/U1_1_6 r1231/U1_1_5 r1231/U1_1_4 r1231/U1_1_3 r1231/U1_1_2 r1231/U1_1_1 r1231/U1 r1231/U2 add_0_root_add_0_root_add_66_3/U1_7 add_0_root_add_0_root_add_66_3/U1_6 add_0_root_add_0_root_add_66_3/U1_5 add_0_root_add_0_root_add_66_3/U1 add_0_root_add_0_root_add_66_3/U2 add_0_root_add_0_root_add_66_3/U3 add_0_root_add_0_root_add_66_3/U4 add_0_root_add_0_root_add_66_3/U5 add_0_root_add_0_root_add_66_3/U6 add_0_root_add_0_root_add_66_3/U7 add_0_root_add_0_root_add_66_3/U8 add_0_root_add_0_root_add_66_3/U9 add_0_root_add_0_root_add_66_3/U10 add_0_root_add_0_root_add_66_3/U11 add_0_root_add_0_root_add_66_3/U12 add_0_root_add_0_root_add_66_3/U13 add_0_root_add_0_root_add_66_3/U14 model_sram scan_index_reg_0_ state_reg_2_ t_reg_0_ last_pipe_reg_0_ last_pipe_reg_1_ last_pipe_reg_2_ last_pipe_reg_3_ last_pipe_reg_4_ state_reg_0_ state_reg_1_ t_reg_2_ t_reg_1_ t_reg_3_ t_reg_4_ t_reg_5_ t_reg_6_ t_reg_7_ t_reg_8_ t_reg_9_ t_reg_10_ t_reg_11_ hstate_reg_39_ h0_reg_39_ hstate_reg_93_ h0_reg_93_ hstate_reg_147_ h0_reg_147_ hstate_reg_194_ h0_reg_194_ hstate_reg_3_ h0_reg_3_ hstate_reg_122_ h0_reg_122_ hstate_reg_96_ h0_reg_96_ hstate_reg_83_ h0_reg_83_ ...}
+set macros [get_cells model_sram]
+{model_sram}
+if {[sizeof_collection $macros]!=1} {error "SRAM macro missing"}
+set std [remove_from_collection $leaves $macros]
+{add_132_S2/U1_1_30 add_132_S2/U1_1_29 add_132_S2/U1_1_28 add_132_S2/U1_1_27 add_132_S2/U1_1_26 add_132_S2/U1_1_25 add_132_S2/U1_1_24 add_132_S2/U1_1_23 add_132_S2/U1_1_22 add_132_S2/U1_1_21 add_132_S2/U1_1_20 add_132_S2/U1_1_19 add_132_S2/U1_1_18 add_132_S2/U1_1_17 add_132_S2/U1_1_16 add_132_S2/U1_1_15 add_132_S2/U1_1_14 add_132_S2/U1_1_13 add_132_S2/U1_1_12 add_132_S2/U1_1_11 add_132_S2/U1_1_10 add_132_S2/U1_1_9 add_132_S2/U1_1_8 add_132_S2/U1_1_7 add_132_S2/U1_1_6 add_132_S2/U1_1_5 add_132_S2/U1_1_4 add_132_S2/U1_1_3 add_132_S2/U1_1_2 add_132_S2/U1_1_1 add_132_S2/U1 add_132_S2/U2 r1231/U1_1_11 r1231/U1_1_10 r1231/U1_1_9 r1231/U1_1_8 r1231/U1_1_7 r1231/U1_1_6 r1231/U1_1_5 r1231/U1_1_4 r1231/U1_1_3 r1231/U1_1_2 r1231/U1_1_1 r1231/U1 r1231/U2 add_0_root_add_0_root_add_66_3/U1_7 add_0_root_add_0_root_add_66_3/U1_6 add_0_root_add_0_root_add_66_3/U1_5 add_0_root_add_0_root_add_66_3/U1 add_0_root_add_0_root_add_66_3/U2 add_0_root_add_0_root_add_66_3/U3 add_0_root_add_0_root_add_66_3/U4 add_0_root_add_0_root_add_66_3/U5 add_0_root_add_0_root_add_66_3/U6 add_0_root_add_0_root_add_66_3/U7 add_0_root_add_0_root_add_66_3/U8 add_0_root_add_0_root_add_66_3/U9 add_0_root_add_0_root_add_66_3/U10 add_0_root_add_0_root_add_66_3/U11 add_0_root_add_0_root_add_66_3/U12 add_0_root_add_0_root_add_66_3/U13 add_0_root_add_0_root_add_66_3/U14 scan_index_reg_0_ state_reg_2_ t_reg_0_ last_pipe_reg_0_ last_pipe_reg_1_ last_pipe_reg_2_ last_pipe_reg_3_ last_pipe_reg_4_ state_reg_0_ state_reg_1_ t_reg_2_ t_reg_1_ t_reg_3_ t_reg_4_ t_reg_5_ t_reg_6_ t_reg_7_ t_reg_8_ t_reg_9_ t_reg_10_ t_reg_11_ hstate_reg_39_ h0_reg_39_ hstate_reg_93_ h0_reg_93_ hstate_reg_147_ h0_reg_147_ hstate_reg_194_ h0_reg_194_ hstate_reg_3_ h0_reg_3_ hstate_reg_122_ h0_reg_122_ hstate_reg_96_ h0_reg_96_ hstate_reg_83_ h0_reg_83_ hstate_reg_140_ ...}
+set area 0.0
+0.0
+set mapped_count 0
+0
+set ff_count 0
+0
+set constant_pseudo_count 0
+0
+array set hist {}
+foreach_in_collection cell $std {
+    set ref [get_attribute $cell ref_name]
+    if {$ref eq "**logic_0**" || $ref eq "**logic_1**"} {incr constant_pseudo_count; continue}
+    set libcell [get_lib_cells NangateOpenCellLibrary/$ref]
+    if {[sizeof_collection $libcell]!=1} {error "Unexpected unmapped/nonstandard cell $ref"}
+    set area [expr {$area+[get_attribute $libcell area]}]
+    incr mapped_count
+    if {[string match DFF* $ref]} {incr ff_count}
+    if {![info exists hist($ref)]} {set hist($ref) 0}
+    incr hist($ref)
+}
+set fp [open $out/cell_metrics.txt w]
+file14
+puts $fp "classes=$k"
+puts $fp "standard_cell_count=$mapped_count"
+puts $fp "standard_cell_area_um2=$area"
+puts $fp "ff_count=$ff_count"
+puts $fp "ideal_constant_pseudo_cells=$constant_pseudo_count"
+puts $fp "sram_macro_count=[sizeof_collection $macros]"
+puts $fp "sram_macro_ref=[get_attribute $macros ref_name]"
+foreach ref [lsort [array names hist]] {puts $fp "cell:$ref=$hist($ref)"}
+close $fp
+exit
+
+Memory usage for this session 261 Mbytes.
+Memory usage for this session including child processes 261 Mbytes.
+CPU usage for this session 11 seconds ( 0.00 hours ).
+Elapsed time for this session 12 seconds ( 0.00 hours ).
+
+Thank you...

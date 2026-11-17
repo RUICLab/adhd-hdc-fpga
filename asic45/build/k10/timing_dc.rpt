@@ -1,0 +1,570 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 10
+        -transition_time
+        -capacitance
+Design : adhd_hdc
+Version: X-2025.06-SP3
+Date   : Tue Nov 17 11:34:17 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_9_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adhd_hdc           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  input external delay                                         1.00       1.00 f
+  resetn (in)                                        0.05      0.00       1.00 f
+  resetn (net)                   1         1.86                0.00       1.00 f
+  U5715/ZN (INV_X1)                                  0.09      0.13       1.13 r
+  n8225 (net)                   18        37.92                0.00       1.13 r
+  U6669/ZN (INV_X1)                                  0.04      0.09       1.22 f
+  n8221 (net)                   13        23.71                0.00       1.22 f
+  U5692/ZN (AND2_X1)                                 0.01      0.07       1.29 f
+  n7630 (net)                    3         4.45                0.00       1.29 f
+  U5641/Z (BUF_X1)                                   0.04      0.08       1.37 f
+  n8117 (net)                   15        31.77                0.00       1.37 f
+  U5956/ZN (INV_X1)                                  0.08      0.13       1.49 r
+  n8114 (net)                   15        33.10                0.00       1.49 r
+  U7376/ZN (NAND2_X1)                                0.02      0.05       1.54 f
+  n4079 (net)                    1         1.83                0.00       1.54 f
+  U7375/ZN (OAI21_X1)                                0.03      0.03       1.57 r
+  n_1_net__11_ (net)             1         1.28                0.00       1.57 r
+  U5391/Z (BUF_X1)                                   0.01      0.04       1.61 r
+  n6557 (net)                    1         2.31                0.00       1.61 r
+  model_sram/Q[9] (adhd_sram_8192x14)                0.05      1.15       2.76 f
+  sram_q[9] (net)                1         1.74                0.00       2.76 f
+  U7354/ZN (AOI22_X1)                                0.03      0.07       2.83 r
+  n592 (net)                     1         2.01                0.00       2.83 r
+  U7353/ZN (INV_X1)                                  0.01      0.02       2.85 f
+  n8347 (net)                    1         1.37                0.00       2.85 f
+  word0_reg_9_/D (DFF_X1)                            0.01      0.01       2.86 f
+  data arrival time                                                       2.86
+
+  clock core_clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  clock uncertainty                                           -0.10       9.90
+  word0_reg_9_/CK (DFF_X1)                                     0.00       9.90 r
+  library setup time                                          -0.02       9.88
+  data required time                                                      9.88
+  -------------------------------------------------------------------------------
+  data required time                                                      9.88
+  data arrival time                                                      -2.86
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.02
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_8_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adhd_hdc           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  input external delay                                         1.00       1.00 f
+  resetn (in)                                        0.05      0.00       1.00 f
+  resetn (net)                   1         1.86                0.00       1.00 f
+  U5715/ZN (INV_X1)                                  0.09      0.13       1.13 r
+  n8225 (net)                   18        37.92                0.00       1.13 r
+  U6669/ZN (INV_X1)                                  0.04      0.09       1.22 f
+  n8221 (net)                   13        23.71                0.00       1.22 f
+  U5692/ZN (AND2_X1)                                 0.01      0.07       1.29 f
+  n7630 (net)                    3         4.45                0.00       1.29 f
+  U5641/Z (BUF_X1)                                   0.04      0.08       1.37 f
+  n8117 (net)                   15        31.77                0.00       1.37 f
+  U5956/ZN (INV_X1)                                  0.08      0.13       1.49 r
+  n8114 (net)                   15        33.10                0.00       1.49 r
+  U7376/ZN (NAND2_X1)                                0.02      0.05       1.54 f
+  n4079 (net)                    1         1.83                0.00       1.54 f
+  U7375/ZN (OAI21_X1)                                0.03      0.03       1.57 r
+  n_1_net__11_ (net)             1         1.28                0.00       1.57 r
+  U5391/Z (BUF_X1)                                   0.01      0.04       1.61 r
+  n6557 (net)                    1         2.31                0.00       1.61 r
+  model_sram/Q[8] (adhd_sram_8192x14)                0.05      1.15       2.76 f
+  sram_q[8] (net)                1         1.74                0.00       2.76 f
+  U7352/ZN (AOI22_X1)                                0.03      0.07       2.83 r
+  n591 (net)                     1         2.01                0.00       2.83 r
+  U7351/ZN (INV_X1)                                  0.01      0.02       2.85 f
+  n8348 (net)                    1         1.37                0.00       2.85 f
+  word0_reg_8_/D (DFF_X1)                            0.01      0.01       2.86 f
+  data arrival time                                                       2.86
+
+  clock core_clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  clock uncertainty                                           -0.10       9.90
+  word0_reg_8_/CK (DFF_X1)                                     0.00       9.90 r
+  library setup time                                          -0.02       9.88
+  data required time                                                      9.88
+  -------------------------------------------------------------------------------
+  data required time                                                      9.88
+  data arrival time                                                      -2.86
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.02
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_7_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adhd_hdc           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  input external delay                                         1.00       1.00 f
+  resetn (in)                                        0.05      0.00       1.00 f
+  resetn (net)                   1         1.86                0.00       1.00 f
+  U5715/ZN (INV_X1)                                  0.09      0.13       1.13 r
+  n8225 (net)                   18        37.92                0.00       1.13 r
+  U6669/ZN (INV_X1)                                  0.04      0.09       1.22 f
+  n8221 (net)                   13        23.71                0.00       1.22 f
+  U5692/ZN (AND2_X1)                                 0.01      0.07       1.29 f
+  n7630 (net)                    3         4.45                0.00       1.29 f
+  U5641/Z (BUF_X1)                                   0.04      0.08       1.37 f
+  n8117 (net)                   15        31.77                0.00       1.37 f
+  U5956/ZN (INV_X1)                                  0.08      0.13       1.49 r
+  n8114 (net)                   15        33.10                0.00       1.49 r
+  U7376/ZN (NAND2_X1)                                0.02      0.05       1.54 f
+  n4079 (net)                    1         1.83                0.00       1.54 f
+  U7375/ZN (OAI21_X1)                                0.03      0.03       1.57 r
+  n_1_net__11_ (net)             1         1.28                0.00       1.57 r
+  U5391/Z (BUF_X1)                                   0.01      0.04       1.61 r
+  n6557 (net)                    1         2.31                0.00       1.61 r
+  model_sram/Q[7] (adhd_sram_8192x14)                0.05      1.15       2.76 f
+  sram_q[7] (net)                1         1.74                0.00       2.76 f
+  U7350/ZN (AOI22_X1)                                0.03      0.07       2.83 r
+  n590 (net)                     1         2.01                0.00       2.83 r
+  U7349/ZN (INV_X1)                                  0.01      0.02       2.85 f
+  n8349 (net)                    1         1.37                0.00       2.85 f
+  word0_reg_7_/D (DFF_X1)                            0.01      0.01       2.86 f
+  data arrival time                                                       2.86
+
+  clock core_clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  clock uncertainty                                           -0.10       9.90
+  word0_reg_7_/CK (DFF_X1)                                     0.00       9.90 r
+  library setup time                                          -0.02       9.88
+  data required time                                                      9.88
+  -------------------------------------------------------------------------------
+  data required time                                                      9.88
+  data arrival time                                                      -2.86
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.02
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_6_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adhd_hdc           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  input external delay                                         1.00       1.00 f
+  resetn (in)                                        0.05      0.00       1.00 f
+  resetn (net)                   1         1.86                0.00       1.00 f
+  U5715/ZN (INV_X1)                                  0.09      0.13       1.13 r
+  n8225 (net)                   18        37.92                0.00       1.13 r
+  U6669/ZN (INV_X1)                                  0.04      0.09       1.22 f
+  n8221 (net)                   13        23.71                0.00       1.22 f
+  U5692/ZN (AND2_X1)                                 0.01      0.07       1.29 f
+  n7630 (net)                    3         4.45                0.00       1.29 f
+  U5641/Z (BUF_X1)                                   0.04      0.08       1.37 f
+  n8117 (net)                   15        31.77                0.00       1.37 f
+  U5956/ZN (INV_X1)                                  0.08      0.13       1.49 r
+  n8114 (net)                   15        33.10                0.00       1.49 r
+  U7376/ZN (NAND2_X1)                                0.02      0.05       1.54 f
+  n4079 (net)                    1         1.83                0.00       1.54 f
+  U7375/ZN (OAI21_X1)                                0.03      0.03       1.57 r
+  n_1_net__11_ (net)             1         1.28                0.00       1.57 r
+  U5391/Z (BUF_X1)                                   0.01      0.04       1.61 r
+  n6557 (net)                    1         2.31                0.00       1.61 r
+  model_sram/Q[6] (adhd_sram_8192x14)                0.05      1.15       2.76 f
+  sram_q[6] (net)                1         1.74                0.00       2.76 f
+  U7348/ZN (AOI22_X1)                                0.03      0.07       2.83 r
+  n589 (net)                     1         2.01                0.00       2.83 r
+  U7347/ZN (INV_X1)                                  0.01      0.02       2.85 f
+  n8350 (net)                    1         1.37                0.00       2.85 f
+  word0_reg_6_/D (DFF_X1)                            0.01      0.01       2.86 f
+  data arrival time                                                       2.86
+
+  clock core_clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  clock uncertainty                                           -0.10       9.90
+  word0_reg_6_/CK (DFF_X1)                                     0.00       9.90 r
+  library setup time                                          -0.02       9.88
+  data required time                                                      9.88
+  -------------------------------------------------------------------------------
+  data required time                                                      9.88
+  data arrival time                                                      -2.86
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.02
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_5_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adhd_hdc           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  input external delay                                         1.00       1.00 f
+  resetn (in)                                        0.05      0.00       1.00 f
+  resetn (net)                   1         1.86                0.00       1.00 f
+  U5715/ZN (INV_X1)                                  0.09      0.13       1.13 r
+  n8225 (net)                   18        37.92                0.00       1.13 r
+  U6669/ZN (INV_X1)                                  0.04      0.09       1.22 f
+  n8221 (net)                   13        23.71                0.00       1.22 f
+  U5692/ZN (AND2_X1)                                 0.01      0.07       1.29 f
+  n7630 (net)                    3         4.45                0.00       1.29 f
+  U5641/Z (BUF_X1)                                   0.04      0.08       1.37 f
+  n8117 (net)                   15        31.77                0.00       1.37 f
+  U5956/ZN (INV_X1)                                  0.08      0.13       1.49 r
+  n8114 (net)                   15        33.10                0.00       1.49 r
+  U7376/ZN (NAND2_X1)                                0.02      0.05       1.54 f
+  n4079 (net)                    1         1.83                0.00       1.54 f
+  U7375/ZN (OAI21_X1)                                0.03      0.03       1.57 r
+  n_1_net__11_ (net)             1         1.28                0.00       1.57 r
+  U5391/Z (BUF_X1)                                   0.01      0.04       1.61 r
+  n6557 (net)                    1         2.31                0.00       1.61 r
+  model_sram/Q[5] (adhd_sram_8192x14)                0.05      1.15       2.76 f
+  sram_q[5] (net)                1         1.74                0.00       2.76 f
+  U7346/ZN (AOI22_X1)                                0.03      0.07       2.83 r
+  n588 (net)                     1         2.01                0.00       2.83 r
+  U7345/ZN (INV_X1)                                  0.01      0.02       2.85 f
+  n8351 (net)                    1         1.37                0.00       2.85 f
+  word0_reg_5_/D (DFF_X1)                            0.01      0.01       2.86 f
+  data arrival time                                                       2.86
+
+  clock core_clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  clock uncertainty                                           -0.10       9.90
+  word0_reg_5_/CK (DFF_X1)                                     0.00       9.90 r
+  library setup time                                          -0.02       9.88
+  data required time                                                      9.88
+  -------------------------------------------------------------------------------
+  data required time                                                      9.88
+  data arrival time                                                      -2.86
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.02
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_4_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adhd_hdc           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  input external delay                                         1.00       1.00 f
+  resetn (in)                                        0.05      0.00       1.00 f
+  resetn (net)                   1         1.86                0.00       1.00 f
+  U5715/ZN (INV_X1)                                  0.09      0.13       1.13 r
+  n8225 (net)                   18        37.92                0.00       1.13 r
+  U6669/ZN (INV_X1)                                  0.04      0.09       1.22 f
+  n8221 (net)                   13        23.71                0.00       1.22 f
+  U5692/ZN (AND2_X1)                                 0.01      0.07       1.29 f
+  n7630 (net)                    3         4.45                0.00       1.29 f
+  U5641/Z (BUF_X1)                                   0.04      0.08       1.37 f
+  n8117 (net)                   15        31.77                0.00       1.37 f
+  U5956/ZN (INV_X1)                                  0.08      0.13       1.49 r
+  n8114 (net)                   15        33.10                0.00       1.49 r
+  U7376/ZN (NAND2_X1)                                0.02      0.05       1.54 f
+  n4079 (net)                    1         1.83                0.00       1.54 f
+  U7375/ZN (OAI21_X1)                                0.03      0.03       1.57 r
+  n_1_net__11_ (net)             1         1.28                0.00       1.57 r
+  U5391/Z (BUF_X1)                                   0.01      0.04       1.61 r
+  n6557 (net)                    1         2.31                0.00       1.61 r
+  model_sram/Q[4] (adhd_sram_8192x14)                0.05      1.15       2.76 f
+  sram_q[4] (net)                1         1.74                0.00       2.76 f
+  U7344/ZN (AOI22_X1)                                0.03      0.07       2.83 r
+  n587 (net)                     1         2.01                0.00       2.83 r
+  U7343/ZN (INV_X1)                                  0.01      0.02       2.85 f
+  n8352 (net)                    1         1.37                0.00       2.85 f
+  word0_reg_4_/D (DFF_X1)                            0.01      0.01       2.86 f
+  data arrival time                                                       2.86
+
+  clock core_clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  clock uncertainty                                           -0.10       9.90
+  word0_reg_4_/CK (DFF_X1)                                     0.00       9.90 r
+  library setup time                                          -0.02       9.88
+  data required time                                                      9.88
+  -------------------------------------------------------------------------------
+  data required time                                                      9.88
+  data arrival time                                                      -2.86
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.02
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_3_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adhd_hdc           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  input external delay                                         1.00       1.00 f
+  resetn (in)                                        0.05      0.00       1.00 f
+  resetn (net)                   1         1.86                0.00       1.00 f
+  U5715/ZN (INV_X1)                                  0.09      0.13       1.13 r
+  n8225 (net)                   18        37.92                0.00       1.13 r
+  U6669/ZN (INV_X1)                                  0.04      0.09       1.22 f
+  n8221 (net)                   13        23.71                0.00       1.22 f
+  U5692/ZN (AND2_X1)                                 0.01      0.07       1.29 f
+  n7630 (net)                    3         4.45                0.00       1.29 f
+  U5641/Z (BUF_X1)                                   0.04      0.08       1.37 f
+  n8117 (net)                   15        31.77                0.00       1.37 f
+  U5956/ZN (INV_X1)                                  0.08      0.13       1.49 r
+  n8114 (net)                   15        33.10                0.00       1.49 r
+  U7376/ZN (NAND2_X1)                                0.02      0.05       1.54 f
+  n4079 (net)                    1         1.83                0.00       1.54 f
+  U7375/ZN (OAI21_X1)                                0.03      0.03       1.57 r
+  n_1_net__11_ (net)             1         1.28                0.00       1.57 r
+  U5391/Z (BUF_X1)                                   0.01      0.04       1.61 r
+  n6557 (net)                    1         2.31                0.00       1.61 r
+  model_sram/Q[3] (adhd_sram_8192x14)                0.05      1.15       2.76 f
+  sram_q[3] (net)                1         1.74                0.00       2.76 f
+  U7342/ZN (AOI22_X1)                                0.03      0.07       2.83 r
+  n586 (net)                     1         2.01                0.00       2.83 r
+  U7341/ZN (INV_X1)                                  0.01      0.02       2.85 f
+  n8353 (net)                    1         1.37                0.00       2.85 f
+  word0_reg_3_/D (DFF_X1)                            0.01      0.01       2.86 f
+  data arrival time                                                       2.86
+
+  clock core_clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  clock uncertainty                                           -0.10       9.90
+  word0_reg_3_/CK (DFF_X1)                                     0.00       9.90 r
+  library setup time                                          -0.02       9.88
+  data required time                                                      9.88
+  -------------------------------------------------------------------------------
+  data required time                                                      9.88
+  data arrival time                                                      -2.86
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.02
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_2_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adhd_hdc           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  input external delay                                         1.00       1.00 f
+  resetn (in)                                        0.05      0.00       1.00 f
+  resetn (net)                   1         1.86                0.00       1.00 f
+  U5715/ZN (INV_X1)                                  0.09      0.13       1.13 r
+  n8225 (net)                   18        37.92                0.00       1.13 r
+  U6669/ZN (INV_X1)                                  0.04      0.09       1.22 f
+  n8221 (net)                   13        23.71                0.00       1.22 f
+  U5692/ZN (AND2_X1)                                 0.01      0.07       1.29 f
+  n7630 (net)                    3         4.45                0.00       1.29 f
+  U5641/Z (BUF_X1)                                   0.04      0.08       1.37 f
+  n8117 (net)                   15        31.77                0.00       1.37 f
+  U5956/ZN (INV_X1)                                  0.08      0.13       1.49 r
+  n8114 (net)                   15        33.10                0.00       1.49 r
+  U7376/ZN (NAND2_X1)                                0.02      0.05       1.54 f
+  n4079 (net)                    1         1.83                0.00       1.54 f
+  U7375/ZN (OAI21_X1)                                0.03      0.03       1.57 r
+  n_1_net__11_ (net)             1         1.28                0.00       1.57 r
+  U5391/Z (BUF_X1)                                   0.01      0.04       1.61 r
+  n6557 (net)                    1         2.31                0.00       1.61 r
+  model_sram/Q[2] (adhd_sram_8192x14)                0.05      1.15       2.76 f
+  sram_q[2] (net)                1         1.74                0.00       2.76 f
+  U7340/ZN (AOI22_X1)                                0.03      0.07       2.83 r
+  n585 (net)                     1         2.01                0.00       2.83 r
+  U7339/ZN (INV_X1)                                  0.01      0.02       2.85 f
+  n8354 (net)                    1         1.37                0.00       2.85 f
+  word0_reg_2_/D (DFF_X1)                            0.01      0.01       2.86 f
+  data arrival time                                                       2.86
+
+  clock core_clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  clock uncertainty                                           -0.10       9.90
+  word0_reg_2_/CK (DFF_X1)                                     0.00       9.90 r
+  library setup time                                          -0.02       9.88
+  data required time                                                      9.88
+  -------------------------------------------------------------------------------
+  data required time                                                      9.88
+  data arrival time                                                      -2.86
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.02
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_1_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adhd_hdc           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  input external delay                                         1.00       1.00 f
+  resetn (in)                                        0.05      0.00       1.00 f
+  resetn (net)                   1         1.86                0.00       1.00 f
+  U5715/ZN (INV_X1)                                  0.09      0.13       1.13 r
+  n8225 (net)                   18        37.92                0.00       1.13 r
+  U6669/ZN (INV_X1)                                  0.04      0.09       1.22 f
+  n8221 (net)                   13        23.71                0.00       1.22 f
+  U5692/ZN (AND2_X1)                                 0.01      0.07       1.29 f
+  n7630 (net)                    3         4.45                0.00       1.29 f
+  U5641/Z (BUF_X1)                                   0.04      0.08       1.37 f
+  n8117 (net)                   15        31.77                0.00       1.37 f
+  U5956/ZN (INV_X1)                                  0.08      0.13       1.49 r
+  n8114 (net)                   15        33.10                0.00       1.49 r
+  U7376/ZN (NAND2_X1)                                0.02      0.05       1.54 f
+  n4079 (net)                    1         1.83                0.00       1.54 f
+  U7375/ZN (OAI21_X1)                                0.03      0.03       1.57 r
+  n_1_net__11_ (net)             1         1.28                0.00       1.57 r
+  U5391/Z (BUF_X1)                                   0.01      0.04       1.61 r
+  n6557 (net)                    1         2.31                0.00       1.61 r
+  model_sram/Q[1] (adhd_sram_8192x14)                0.05      1.15       2.76 f
+  sram_q[1] (net)                1         1.74                0.00       2.76 f
+  U7338/ZN (AOI22_X1)                                0.03      0.07       2.83 r
+  n584 (net)                     1         2.01                0.00       2.83 r
+  U7337/ZN (INV_X1)                                  0.01      0.02       2.85 f
+  n8355 (net)                    1         1.37                0.00       2.85 f
+  word0_reg_1_/D (DFF_X1)                            0.01      0.01       2.86 f
+  data arrival time                                                       2.86
+
+  clock core_clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  clock uncertainty                                           -0.10       9.90
+  word0_reg_1_/CK (DFF_X1)                                     0.00       9.90 r
+  library setup time                                          -0.02       9.88
+  data required time                                                      9.88
+  -------------------------------------------------------------------------------
+  data required time                                                      9.88
+  data arrival time                                                      -2.86
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.02
+
+
+  Startpoint: resetn (input port clocked by core_clk)
+  Endpoint: word0_reg_0_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adhd_hdc           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  input external delay                                         1.00       1.00 f
+  resetn (in)                                        0.05      0.00       1.00 f
+  resetn (net)                   1         1.86                0.00       1.00 f
+  U5715/ZN (INV_X1)                                  0.09      0.13       1.13 r
+  n8225 (net)                   18        37.92                0.00       1.13 r
+  U6669/ZN (INV_X1)                                  0.04      0.09       1.22 f
+  n8221 (net)                   13        23.71                0.00       1.22 f
+  U5692/ZN (AND2_X1)                                 0.01      0.07       1.29 f
+  n7630 (net)                    3         4.45                0.00       1.29 f
+  U5641/Z (BUF_X1)                                   0.04      0.08       1.37 f
+  n8117 (net)                   15        31.77                0.00       1.37 f
+  U5956/ZN (INV_X1)                                  0.08      0.13       1.49 r
+  n8114 (net)                   15        33.10                0.00       1.49 r
+  U7376/ZN (NAND2_X1)                                0.02      0.05       1.54 f
+  n4079 (net)                    1         1.83                0.00       1.54 f
+  U7375/ZN (OAI21_X1)                                0.03      0.03       1.57 r
+  n_1_net__11_ (net)             1         1.28                0.00       1.57 r
+  U5391/Z (BUF_X1)                                   0.01      0.04       1.61 r
+  n6557 (net)                    1         2.31                0.00       1.61 r
+  model_sram/Q[0] (adhd_sram_8192x14)                0.05      1.15       2.76 f
+  sram_q[0] (net)                1         1.74                0.00       2.76 f
+  U7328/ZN (AOI22_X1)                                0.03      0.07       2.83 r
+  n578 (net)                     1         2.01                0.00       2.83 r
+  U7327/ZN (INV_X1)                                  0.01      0.02       2.85 f
+  n8360 (net)                    1         1.37                0.00       2.85 f
+  word0_reg_0_/D (DFF_X1)                            0.01      0.01       2.86 f
+  data arrival time                                                       2.86
+
+  clock core_clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  clock uncertainty                                           -0.10       9.90
+  word0_reg_0_/CK (DFF_X1)                                     0.00       9.90 r
+  library setup time                                          -0.02       9.88
+  data required time                                                      9.88
+  -------------------------------------------------------------------------------
+  data required time                                                      9.88
+  data arrival time                                                      -2.86
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.02
+
+
+1

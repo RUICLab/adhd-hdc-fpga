@@ -1,0 +1,15 @@
+Notice: timing checks disabled with +notimingcheck at compile-time
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP1-1_Full64; Runtime version X-2025.06-SP1-1_Full64;  Nov 17 11:34 2026
+CASE 0 PASS K=10 D=8192 cycles=8207 winner=0
+CASE 1 PASS K=10 D=8192 cycles=8207 winner=6
+CASE 2 PASS K=10 D=8192 cycles=8207 winner=8
+CASE 3 PASS K=10 D=8192 cycles=8207 winner=9
+ADHD PASS: all query bits, class scores, winners, reset/restart, busy guards, output backpressure
+$finish called from file "rtl/tb_adhd_original.sv", line 85.
+$finish at simulation time            664680000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 664680000 ps
+CPU Time:      1.340 seconds;       Data structure size:   0.6Mb
+Tue Nov 17 11:34:20 2026

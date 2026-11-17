@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : area
+Design : adhd_hdc
+Version: X-2025.06-SP3
+Date   : Tue Nov 17 11:34:50 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'adhd_hdc' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: vendor/NangateOpenCellLibrary_typical.db)
+    adhd_sram_k26 (File: vendor/sram_k26.db)
+
+Number of ports:                          249
+Number of nets:                          9886
+Number of cells:                         8646
+Number of combinational cells:           6935
+Number of sequential cells:              1704
+Number of macros/black boxes:               1
+Number of buf/inv:                       1781
+Number of references:                      36
+
+Combinational area:               8167.530071
+Buf/Inv area:                     1071.713997
+Noncombinational area:            7705.487720
+Macro/Black Box area:           106030.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                121903.017792
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area               Local cell area
+                                  --------------------  --------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-     Noncombi-  Black-
+                                  Total        Total    national   national   boxes        Design
+--------------------------------  -----------  -------  ---------  ---------  -----------  --------------------
+adhd_hdc                          121903.0178    100.0  8029.4761  7705.4877  106030.0000  adhd_hdc
+add_0_root_add_0_root_add_66_3        24.7380      0.0    24.7380     0.0000       0.0000  adhd_hdc_DW01_add_35
+add_132_S2                            81.9280      0.1    81.9280     0.0000       0.0000  adhd_hdc_DW01_inc_1
+r1231                                 31.3880      0.0    31.3880     0.0000       0.0000  adhd_hdc_DW01_inc_2
+--------------------------------  -----------  -------  ---------  ---------  -----------  --------------------
+Total                                                   8167.5301  7705.4877  106030.0000
+
+1
