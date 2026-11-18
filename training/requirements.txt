@@ -1,0 +1,6 @@
+# ADHD Python training/evaluation dependencies (Python 3.10+)
+# For GPU execution, install a compatible torch/torchvision CUDA build first.
+torch>=2.2
+torchvision>=0.17
+numpy>=1.24
+medmnist>=3.0
