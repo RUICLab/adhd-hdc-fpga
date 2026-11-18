@@ -1,0 +1,39 @@
+
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Nov 18 16:17:45 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/mcu_snapshot/xsim_script.tcl
+# xsim {mcu_snapshot} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+MCU_PROGRESS cycles=0
+MCU_PROGRESS cycles=5000000
+MCU_PROGRESS cycles=10000000
+MCU_VERIFY PASS K=10 count=1 total_cycles=11038856
+MCU_PROGRESS cycles=15000000
+MCU_PROGRESS cycles=20000000
+MCU_VERIFY PASS K=10 count=2 total_cycles=22257160
+MCU_PROGRESS cycles=25000000
+MCU_PROGRESS cycles=30000000
+MCU_RESULT K=10 raw_cycles=10694808 overhead=18 cycles=10694790 instructions=2280328 winner=8 score=4188
+MCU_PROGRESS cycles=35000000
+MCU_PROGRESS cycles=40000000
+MCU_VERIFY PASS K=26 count=3 total_cycles=43764860
+MCU_PROGRESS cycles=45000000
+MCU_PROGRESS cycles=50000000
+MCU_PROGRESS cycles=55000000
+MCU_VERIFY PASS K=26 count=4 total_cycles=55325689
+MCU_PROGRESS cycles=60000000
+MCU_PROGRESS cycles=65000000
+MCU_RESULT K=26 raw_cycles=11036303 overhead=18 cycles=11036285 instructions=2344922 winner=16 score=4170
+PASS MCU RTL: K=10/26; tie/random golden query bits, all scores and winners; query-free timing checks
+$finish called at time : 663632575 ns : File "<REPO>/sim/adhd/tb_mcu.sv" Line 59
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:05:49 . Memory (MB): peak = 206.652 ; gain = 0.035
+exit
+INFO: xsimkernel Simulation Memory Usage: 107528 KB (Peak: 107528 KB), Simulation CPU Usage: 337484 ms
+INFO: [Common 17-206] Exiting xsim at Wed Nov 18 16:23:35 2026...

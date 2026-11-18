@@ -1,0 +1,52 @@
+{
+  "target": "ESP32-C3",
+  "kind": "analytical instruction/CPI sensitivity; not measured runtime",
+  "frequency_mhz": 160,
+  "instruction_count_source": "Espressif QEMU 9.2.2 ESP32-C3: one instruction per TB, exec/nochain address-filtered kernel trace, nine identical query-free calls each K, inline kernel including return",
+  "evidence": "docs\\adhd\\esp32\\instruction_counts.json",
+  "warning": "CPI values are assumptions, not calibrated ESP32 timings or hardware bounds",
+  "results": [
+    {
+      "classes": 10,
+      "instructions": 2181879,
+      "assumed_cpi": 1,
+      "estimated_us": 13636.74375,
+      "estimated_mcu_over_fpga": 166.15990922383332
+    },
+    {
+      "classes": 10,
+      "instructions": 2181879,
+      "assumed_cpi": 2,
+      "estimated_us": 27273.4875,
+      "estimated_mcu_over_fpga": 332.31981844766665
+    },
+    {
+      "classes": 10,
+      "instructions": 2181879,
+      "assumed_cpi": 3,
+      "estimated_us": 40910.23125,
+      "estimated_mcu_over_fpga": 498.4797276715
+    },
+    {
+      "classes": 26,
+      "instructions": 2233890,
+      "assumed_cpi": 1,
+      "estimated_us": 13961.8125,
+      "estimated_mcu_over_fpga": 169.7897665085735
+    },
+    {
+      "classes": 26,
+      "instructions": 2233890,
+      "assumed_cpi": 2,
+      "estimated_us": 27923.625,
+      "estimated_mcu_over_fpga": 339.579533017147
+    },
+    {
+      "classes": 26,
+      "instructions": 2233890,
+      "assumed_cpi": 3,
+      "estimated_us": 41885.4375,
+      "estimated_mcu_over_fpga": 509.3692995257205
+    }
+  ]
+}

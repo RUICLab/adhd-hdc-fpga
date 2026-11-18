@@ -1,0 +1,15 @@
+{
+  "idf": "6.1.1",
+  "source_hash_normalization": "UTF-8 CRLF normalized to LF",
+  "source_sha256": {
+    "bench/mcu/hdc_packed.c": "e39fd24529e236fb87b5d3c885b1f345ccc5dc34a93c31d6c30e1da76d96985d",
+    "bench/mcu/hdc_packed.h": "66b4373b47c274accbd001dbaaf253bf5058757e3ca99012629a587df851f063",
+    "bench/esp32/main/main.c": "d5675246f8623793e959107b7b3d86a877154ba1404853af2daabdf158499d61",
+    "bench/esp32/main/CMakeLists.txt": "4145cb0c39c4f32c06a6cd3063f8d56a6c5424f775d6b09bd11af4a68f8beeda",
+    "bench/esp32/CMakeLists.txt": "9b3577f6cdb0157277bbc098f7afd5d9ab0f4a8132e3dbfb150f54097d81f601",
+    "bench/esp32/sdkconfig.defaults": "a5f88a79f95cc8b1428c33e9d4ea805ac9235c3bfd99aaa6a4be581ee13bde03",
+    "scripts/prepare_mcu_vectors.py": "05f03a6f2a9c0a62656da3eb990c18349b6df6fee4d3ff91ff20273d5e4dd310",
+    "scripts/run_esp32_qemu.py": "975d36d8fcd4fb92a2546f71928ef6b7b46916897a2f7edf838eb10159fb8750"
+  },
+  "sdkconfig_sha256": "504437b4fff75c3dcc00fd446da5da8870fd10f48dee77a29d1020f68cbc366e"
+}

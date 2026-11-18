@@ -19,3 +19,5 @@ paper/
 *.pdf
 docs/ADHD_STATUS.md
 docs/adhd/RESULTS.md
+bench/esp32/sdkconfig
+bench/esp32/sdkconfig.old

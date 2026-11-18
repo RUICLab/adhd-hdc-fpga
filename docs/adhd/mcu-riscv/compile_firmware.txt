@@ -1,0 +1,1 @@
+C:/vivado/2026.1/gnu/riscv/linux_toolchain/nt32/x86_64-w64-mingw32/usr/bin/riscv32-amd-linux/../../libexec/riscv32-amd-linux/gcc/riscv32-amd-linux/13.4.0/ld.exe: warning: firmware.elf has a LOAD segment with RWX permissions

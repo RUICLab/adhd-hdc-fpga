@@ -1,0 +1,63 @@
+{
+  "source_commit": "3d5f07c1be66f642d5521d39c7699d0eba3f8f1e",
+  "notes": [
+    "New MCU code and historical execution evidence imported without private Git history.",
+    "Only local workspace/home prefixes in evidence were replaced with neutral placeholders. Numerical results and original ELF/trace/source hashes are retained.",
+    "Existing FPGA, physical-board and ASIC results in this repository are preserved."
+  ],
+  "sanitized_files": {
+    "docs/MCU_VALIDATION.md": {
+      "original_sha256": "4cca94f2cde5537975cf0e0915605642b260d217054f6c0b6763df24d29f5bf2",
+      "public_sha256": "3057385eeb0c148d168202a6ab9dc81f842abe3fe01ad57c0e9904b5c9c6612c"
+    },
+    "docs/adhd/esp32-k10/build_tail.txt": {
+      "original_sha256": "87a8c295e138f14c486d15a320923c243ee9c3aac0e87bebca35dddb186f6141",
+      "public_sha256": "2bb25f9e20d96b34c0894f413b8fb5edc8cbbbf14ce2388b639074aaf8b8a6b9"
+    },
+    "docs/adhd/esp32-k10/command.json": {
+      "original_sha256": "4090a30d5cd1b568687a7e058f746e3cb146244fec3c225cda438eedbb69f596",
+      "public_sha256": "331afee7fb22ef84a70d6ab646de8c0339e78752fa02753ff449563ffb87c93a"
+    },
+    "docs/adhd/esp32-k10/compile_commands.json": {
+      "original_sha256": "87c93e375bea22007eed7da128892e35e81f0aec7ed33ca95ab02f796b37b296",
+      "public_sha256": "9a832799768867d2171f05f3421706465de2a0f495e4d8782f98e38cdaa4e7c3"
+    },
+    "docs/adhd/esp32-k10/kernel_disassembly.txt": {
+      "original_sha256": "4d69003f2a19146803991610fee5cf30389ae5eb90c421fb27fada33a3f837aa",
+      "public_sha256": "1b155edf0326cb8d3448061da0754e423da630ed0b7116e2e53d518f72666c9b"
+    },
+    "docs/adhd/esp32-k10/toolchain_cflags.txt": {
+      "original_sha256": "e9c6ae57c52f69b4ac551f370b8968fe27b37ed7093cb0eaeda0387e8ba866ff",
+      "public_sha256": "2849d807e3d66dca6b0c0fac455a9b3b16fd3cc64efc505899e00ae89ad7d71f"
+    },
+    "docs/adhd/esp32-k26/build_tail.txt": {
+      "original_sha256": "87902cffe9c27fb6caedef3d527eb5e926f1300e02fedf2040860e59e0f47642",
+      "public_sha256": "ac0387d854b2351d600e81f360d7c9371313b2bfb9e4c4e7f63dec95634c19e0"
+    },
+    "docs/adhd/esp32-k26/command.json": {
+      "original_sha256": "69123dd1899d0ce3604d70ed92cc3980c75e73c7fe87f134d7dc108ee61e201e",
+      "public_sha256": "b1cc0860883b53615efc770246fb5008016beea313c2ea492c1d93926b986545"
+    },
+    "docs/adhd/esp32-k26/compile_commands.json": {
+      "original_sha256": "d47838704cace5f8681da30d0e9e66af1903b37adfdb123cca8d204c7e88ca19",
+      "public_sha256": "d309e6eaa4db19dcc4afdd095c853a8ea4029065ac027f2229858899cdd4418b"
+    },
+    "docs/adhd/esp32-k26/kernel_disassembly.txt": {
+      "original_sha256": "ff8a31e1027c695e3068c4fcea338041645bb98683079d97212be43c0ff37e14",
+      "public_sha256": "5bcb00f03e9117b09b85e7695d2e0baebe0a4c45305f546d09871d39f1e66d36"
+    },
+    "docs/adhd/esp32-k26/toolchain_cflags.txt": {
+      "original_sha256": "2567ddf7781854c8452d7f666982d7188f74c5f6d9ab6c553c7a65d703e2ad44",
+      "public_sha256": "784fcd7dd4ee28f18c7a53c5cece03990230d9eb681284ea2f42db05bbbc62f1"
+    },
+    "docs/adhd/mcu-riscv/firmware.map": {
+      "original_sha256": "7856af673461112b20a24490879b993d504e7c266c119d8d00abdbb7abbb8180",
+      "public_sha256": "72553534f469acd3487e21e94398e4d15e557b9ffb9ada77de738a847a7ee3fd"
+    },
+    "docs/adhd/mcu-riscv/simulate.txt": {
+      "original_sha256": "eca52a9908cd6f3499c8e7c04f1990bd40300373a53c35d49dee972d81f22ab9",
+      "public_sha256": "6a176403bd4f87398d8539aacb98fe90d22a512a7f6546060e0dd5f8201d8132"
+    }
+  },
+  "public_hash_normalization": "CRLF normalized to LF, matching Git text storage; original hashes describe original captured file bytes"
+}

@@ -1,0 +1,30 @@
+{
+  "model": "PicoRV32 RV32IMC",
+  "clock_mhz": 100,
+  "memory": "512KiB SRAM; registered one-cycle native-bus response; no cache/flash/interrupts",
+  "kernel": "Gray-code packed32 feature lanes and bit-plane class counters",
+  "results": [
+    {
+      "classes": 10,
+      "raw_cycles": 10694808,
+      "overhead_cycles": 18,
+      "cycles": 10694790,
+      "instructions": 2280328,
+      "winner": 8,
+      "score": 4188,
+      "latency_us_at_100mhz": 106947.9,
+      "mcu_over_fpga_latency": 1303.1302546606555
+    },
+    {
+      "classes": 26,
+      "raw_cycles": 11036303,
+      "overhead_cycles": 18,
+      "cycles": 11036285,
+      "instructions": 2344922,
+      "winner": 16,
+      "score": 4170,
+      "latency_us_at_100mhz": 110362.85,
+      "mcu_over_fpga_latency": 1342.123920710203
+    }
+  ]
+}

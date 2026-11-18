@@ -1,0 +1,121 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 <USER_HOME>\AppData\Local\Temp\cc8e0CH2.o
+ .data          0x00000000        0x0 <USER_HOME>\AppData\Local\Temp\cc8e0CH2.o
+ .bss           0x00000000        0x0 <USER_HOME>\AppData\Local\Temp\cc8e0CH2.o
+ .text          0x00000000        0x0 <USER_HOME>\AppData\Local\Temp\cckwE7Pz.o
+ .data          0x00000000        0x0 <USER_HOME>\AppData\Local\Temp\cckwE7Pz.o
+ .bss           0x00000000        0x0 <USER_HOME>\AppData\Local\Temp\cckwE7Pz.o
+ .eh_frame      0x00000000       0x78 <USER_HOME>\AppData\Local\Temp\cckwE7Pz.o
+ .text          0x00000000        0x0 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .data          0x00000000        0x0 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .bss           0x00000000        0x0 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .eh_frame      0x00000000       0xb4 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x00000000         0x00080000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD <USER_HOME>\AppData\Local\Temp\cc8e0CH2.o
+LOAD <USER_HOME>\AppData\Local\Temp\cckwE7Pz.o
+LOAD <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+
+.text           0x00000000      0xf66
+ *(.text.start)
+ .text.start    0x00000000       0x2e <USER_HOME>\AppData\Local\Temp\cc8e0CH2.o
+                0x00000000                _start
+ *(.text .text.*)
+ .text.hdc_init
+                0x0000002e      0x312 <USER_HOME>\AppData\Local\Temp\cckwE7Pz.o
+                0x0000002e                hdc_init
+ .text.hdc_packed32
+                0x00000340      0x902 <USER_HOME>\AppData\Local\Temp\cckwE7Pz.o
+                0x00000340                hdc_packed32
+ .text.verify   0x00000c42      0x13a <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .text.measure  0x00000d7c      0x102 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .text.startup.main
+                0x00000e7e       0xe8 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+                0x00000e7e                main
+
+.rodata         0x00000f68    0x213a0
+ *(.rodata .rodata.*)
+ .rodata.k26_case2_query
+                0x00000f68      0x400 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k26_case2_scores
+                0x00001368       0x34 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k26_case2_features
+                0x0000139c       0xc4 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k26_case2_model
+                0x00001460     0x8000 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k26_case0_query
+                0x00009460      0x400 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k26_case0_scores
+                0x00009860       0x34 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k26_case0_features
+                0x00009894       0xc4 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k26_case0_model
+                0x00009958     0x8000 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k10_case2_query
+                0x00011958      0x400 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k10_case2_scores
+                0x00011d58       0x14 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k10_case2_features
+                0x00011d6c       0xc4 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k10_case2_model
+                0x00011e30     0x8000 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k10_case0_query
+                0x00019e30      0x400 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k10_case0_scores
+                0x0001a230       0x14 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k10_case0_features
+                0x0001a244       0xc4 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .rodata.k10_case0_model
+                0x0001a308     0x8000 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+
+.rela.dyn       0x00022308        0x0
+ .rela.text.start
+                0x00022308        0x0 <USER_HOME>\AppData\Local\Temp\cc8e0CH2.o
+
+.data
+ *(.data .data.* .sdata .sdata.*)
+
+.bss            0x00022308     0x8664
+                0x00022308                        . = ALIGN (0x4)
+                0x00022308                        _bss_start = .
+ *(.bss .bss.* .sbss .sbss.* COMMON)
+ .bss.ctx       0x00022308      0x16c <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .bss.scores    0x00022474       0x34 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .bss.features  0x000224a8       0xc4 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .bss.query     0x0002256c      0x400 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+ .bss.model     0x0002296c     0x8000 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+                0x0002a96c                        . = ALIGN (0x4)
+                0x0002a96c                        _bss_end = .
+                0x0007fff0                        _stack_top = ((ORIGIN (RAM) + LENGTH (RAM)) - 0x10)
+                0x00000001                        ASSERT ((_bss_end < (_stack_top - 0x4000)), Reserve 16KiB stack)
+OUTPUT(firmware.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x42
+ .riscv.attributes
+                0x00000000       0x40 <USER_HOME>\AppData\Local\Temp\cc8e0CH2.o
+ .riscv.attributes
+                0x00000040       0x42 <USER_HOME>\AppData\Local\Temp\cckwE7Pz.o
+ .riscv.attributes
+                0x00000082       0x42 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+
+.comment        0x00000000       0x12
+ .comment       0x00000000       0x12 <USER_HOME>\AppData\Local\Temp\cckwE7Pz.o
+                                 0x13 (size before relaxing)
+ .comment       0x00000012       0x13 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 <USER_HOME>\AppData\Local\Temp\cckwE7Pz.o
+ .note.GNU-stack
+                0x00000000        0x0 <USER_HOME>\AppData\Local\Temp\cc4uAOPd.o

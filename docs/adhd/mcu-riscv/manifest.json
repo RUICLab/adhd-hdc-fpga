@@ -1,0 +1,21 @@
+{
+  "source_sha256": {
+    "bench/mcu/hdc_packed.c": "e39fd24529e236fb87b5d3c885b1f345ccc5dc34a93c31d6c30e1da76d96985d",
+    "bench/mcu/hdc_packed.h": "66b4373b47c274accbd001dbaaf253bf5058757e3ca99012629a587df851f063",
+    "bench/mcu/start.S": "cd83c59053a6faa47fb4c7aa70de82a6f43102f3fafe3ff20a7391fcacaa8aad",
+    "bench/mcu/firmware.c": "5270cd7e65d6fd15912a6a628bcfefeadd93518e32696f6bf05192c04ef5ddd4",
+    "bench/mcu/link.ld": "2dfa9510b286d7028f2f472e5dffb906ed6ff01795cdcbe45931fcc1f5ecdd26",
+    "sim/adhd/tb_mcu.sv": "7e3ab4fcb6097a177de9c19c72fbc8f9b095d7ac0a4991959aa72d0e4f61d1dc",
+    "scripts/prepare_mcu_vectors.py": "05f03a6f2a9c0a62656da3eb990c18349b6df6fee4d3ff91ff20273d5e4dd310",
+    "scripts/run_mcu_rtl.py": "e8b41665358c7878d25a7e82c8378ad239ce3ffab0cc7aa6060d986a24e8fd3c"
+  },
+  "executed_binary_sha256": "c5a9c408512e6347a7f234922bb279973a6c71b6ac6ba23141bcde0b060b6a68",
+  "current_source_recompile_binary_sha256": "c5a9c408512e6347a7f234922bb279973a6c71b6ac6ba23141bcde0b060b6a68",
+  "status": "PicoRV32 RTL PASS; ESP32-IDF firmware not yet compiled or run",
+  "notes": [
+    "Compiler firmware_current image matches executed image exactly.",
+    "Counter windows retain raw values and subtract measured 18-cycle overhead.",
+    "Model clock/memory are explicit assumptions; not commercial-chip measurements."
+  ],
+  "source_hash_normalization": "UTF-8 source bytes with CRLF normalized to LF"
+}

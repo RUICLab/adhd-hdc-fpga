@@ -1,0 +1,9 @@
+PASS MCU-C K=10 case=0 winner=0 score=8192
+PASS MCU-C K=10 case=1 winner=6 score=4195
+PASS MCU-C K=10 case=2 winner=8 score=4188
+PASS MCU-C K=10 case=3 winner=9 score=8192
+PASS MCU-C K=26 case=0 winner=0 score=8192
+PASS MCU-C K=26 case=1 winner=11 score=4181
+PASS MCU-C K=26 case=2 winner=16 score=4170
+PASS MCU-C K=26 case=3 winner=25 score=8192
+PASS MCU-C: 8 cases; all 65536 query bits, scores and winners; query-free path matches

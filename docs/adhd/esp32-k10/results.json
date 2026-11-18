@@ -1,0 +1,29 @@
+{
+  "target": "ESP32-C3",
+  "classes": 10,
+  "kind": "QEMU functional + dynamic instruction count",
+  "kernel_address": "0x403816b0",
+  "kernel_size": 2420,
+  "call_instructions": [
+    2177029,
+    2239876,
+    2239945,
+    2244895,
+    2181879,
+    2181879,
+    2181879,
+    2181879,
+    2181879,
+    2181879,
+    2181879,
+    2181879,
+    2181879
+  ],
+  "timed_instructions": 2181879,
+  "trace_bytes": 2112076119,
+  "trace_sha256": "52f37fd16e03000f24ee2128db4219e32e0be40ef1e410f0ee3c73201fadf728",
+  "elf_sha256": "73909e7497da3fb57ce55e0c9b31e8338268da05ea25215aa72b98459891d1e3",
+  "compiler": "riscv32-esp-elf-gcc.exe (crosstool-NG esp-15.2.0_20251204) 15.2.0",
+  "qemu": "QEMU emulator version 9.2.2 (esp_develop_9.2.2_20260417)",
+  "warning": "No hardware cycle timing is modeled by this QEMU execution"
+}

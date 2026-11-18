@@ -93,3 +93,14 @@ bitstream's numerical core and fixture controller are retained unchanged.
 No trained model, dataset, generated vendor IP, bitstream, executable,
 manuscript, bibliography or private Git history is distributed. Rebuild with
 an installed vendor toolchain using [reproduction commands](REPRODUCE.md).
+
+## MCU reference results
+
+The separate [MCU study](MCU_VALIDATION.md) adds historical PicoRV32 RTL
+execution results and ESP32-C3 functional QEMU validation with an explicit
+instruction/CPI sensitivity model. These MCU runs do not use physical boards
+and do not alter the FPGA/board or ASIC results above. The portable C kernel
+also passes all eight independent fixtures in this repository after import:
+65,536 query-bit comparisons, all class scores and winners, and query-free
+outputs match. Public evidence path substitutions and original hashes are
+recorded in `adhd/mcu_publication_manifest.json`.

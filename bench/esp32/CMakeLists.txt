@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16)
+set(HDC_CLASSES 10 CACHE STRING "10 or 26 HDC classes")
+if(NOT HDC_CLASSES MATCHES "^(10|26)$")
+  message(FATAL_ERROR "HDC_CLASSES must be 10 or 26")
+endif()
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(adhd_esp32_benchmark)

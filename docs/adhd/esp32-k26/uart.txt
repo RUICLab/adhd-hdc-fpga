@@ -1,0 +1,70 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5830,len:0x1424
+load:0x403cbf10,len:0xcbc
+load:0x403ce710,len:0x2f5c
+entry 0x403cbf1a
+I (1) boot: ESP-IDF v6.1.1 2nd stage bootloader
+I (2) boot: compile time Nov 18 2026 16:48:14
+I (7) boot: chip revision: v0.3
+I (10) boot.esp32c3: SPI Speed      : 80MHz
+I (11) boot.esp32c3: SPI Mode       : SLOW READ
+I (12) boot.esp32c3: SPI Flash Size : 2MB
+I (26) boot: Partition Table:
+I (26) boot: ## Label            Usage          Type ST Offset   Length
+I (27) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (28) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (30) boot:  2 factory          factory app      00 00 00010000 00100000
+I (34) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=29374h (168820) map
+I (82) esp_image: segment 1: paddr=0003939c vaddr=3fc89c00 size=018b8h (  6328) load
+I (87) esp_image: segment 2: paddr=0003ac5c vaddr=40380000 size=053bch ( 21436) load
+I (96) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=10930h ( 67888) map
+I (115) esp_image: segment 4: paddr=00050958 vaddr=403853bc size=046ech ( 18156) load
+I (123) esp_image: segment 5: paddr=0005504c vaddr=50000000 size=00024h (    36) load
+I (129) boot: Loaded app from partition at offset 0x10000
+I (148) cpu_start: Unicore app
+I (162) cpu_start: GPIO 20 and 21 are used as console UART I/O pins
+I (165) cpu_start: Pro cpu start user code
+I (165) cpu_start: cpu freq: 160000000 Hz
+I (166) app_init: Application information:
+I (166) app_init: Project name:     adhd_esp32_benchmark
+I (166) app_init: App version:      8867dd3
+I (167) app_init: Compile time:     Nov 18 2026 16:47:49
+I (167) app_init: ELF file SHA256:  8b4139edb...
+I (168) app_init: ESP-IDF:          v6.1.1
+I (168) efuse_init: Min chip rev:     v0.3
+I (168) efuse_init: Max chip rev:     v1.99 
+I (169) efuse_init: Chip rev:         v0.3
+I (171) heap_init: Initializing. RAM available for dynamic allocation:
+I (173) heap_init: At 3FC94B50 len 0002B4B0 (173 KiB): RAM
+I (174) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM
+I (174) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM
+I (175) heap_init: At 50000024 len 00001FC4 (7 KiB): RTCRAM
+I (192) spi_flash: detected chip: gd
+I (193) spi_flash: flash io: dio
+W (193) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (197) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (199) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (207) main_task: Started on CPU0
+I (207) main_task: Calling app_main()
+ESP32_HDC target=esp32c3 core=0 classes=26 D=8192 configured_mhz=160 idf=v6.1.1
+NOTICE: QEMU guest counters are NOT cycle-accurate ESP32 latency measurements.
+ESP32_HDC VERIFY PASS case=0 winner=0
+ESP32_HDC VERIFY PASS case=1 winner=11
+ESP32_HDC VERIFY PASS case=2 winner=16
+ESP32_HDC VERIFY PASS case=3 winner=25
+ESP32_HDC SAMPLE sample=0 guest_counter_delta=1470086816 winner=16 score=4170
+ESP32_HDC SAMPLE sample=1 guest_counter_delta=1453974512 winner=16 score=4170
+ESP32_HDC SAMPLE sample=2 guest_counter_delta=1358849200 winner=16 score=4170
+ESP32_HDC SAMPLE sample=3 guest_counter_delta=1404623296 winner=16 score=4170
+ESP32_HDC SAMPLE sample=4 guest_counter_delta=1488983696 winner=16 score=4170
+ESP32_HDC SAMPLE sample=5 guest_counter_delta=1429396480 winner=16 score=4170
+ESP32_HDC SAMPLE sample=6 guest_counter_delta=1359913600 winner=16 score=4170
+ESP32_HDC SAMPLE sample=7 guest_counter_delta=1248642592 winner=16 score=4170
+ESP32_HDC SAMPLE sample=8 guest_counter_delta=1055216592 winner=16 score=4170
+ESP32_HDC PASS classes=26; functional simulation only; count instructions for analytical timing
+QEMU: Terminated
+

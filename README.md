@@ -98,3 +98,24 @@ and [results with assumptions](asic45/RESULTS.md). At 100 MHz the estimated
 energy is 250.14 nJ/inference for K=10 and 296.98 nJ/inference for K=26.
 These are pre-layout Nangate45/CACTI estimates, not measured ASIC energy.
 No sensor implementation is included.
+
+## Microcontroller comparisons
+
+The [MCU validation guide](docs/MCU_VALIDATION.md) provides the portable packed
+32-bit Gray-code kernel, independent reference fixtures, PicoRV32 RTL testbench,
+ESP32-C3 firmware and commands to reproduce the execution evidence.
+
+| Target | K=10 latency | K=26 latency | Evidence type |
+|---|---:|---:|---|
+| PicoRV32 RV32IMC, modeled 100 MHz | 106.948 ms | 110.363 ms | CPU RTL cycles with a registered one-cycle SRAM response |
+| ESP32-C3, assumed 160 MHz and CPI=2 | 27.273 ms | 27.924 ms | QEMU instruction counts with an analytical CPI model |
+
+The MCU query vectors, class scores and predictions match an independent
+direct-parity reference. ESP32-C3 counts are 2,181,879/2,233,890 instructions
+per query-free inference, identical over nine calls per class configuration.
+QEMU is not cycle accurate; its guest counters are not used as ESP32 hardware
+latency. CPI=1/2/3 sensitivity is documented in the guide. Neither MCU result
+is a physical-board measurement, dataset-average latency or an energy result.
+These HDC-only comparisons exclude the sensor/CNN, model loading, mask
+initialization and communication. Archived MCU evidence is under
+`docs/adhd/mcu-riscv/` and `docs/adhd/esp32*/`.

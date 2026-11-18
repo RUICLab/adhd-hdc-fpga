@@ -1,0 +1,40 @@
+NOTE: C:/esp/v6.1.1/esp-idf/components/bt/host/bluedroid/Kconfig.in:75: Choice symbol BT_ENC_KEY_SIZE_CTRL_STD (member of BT_ENC_KEY_SIZE_CTRL_ENABLED choice) is defined with a warning, which has no effect for choice symbols.
+NOTE: C:/esp/v6.1.1/esp-idf/components/bt/host/bluedroid/Kconfig.in:81: Choice symbol BT_ENC_KEY_SIZE_CTRL_VSC (member of BT_ENC_KEY_SIZE_CTRL_ENABLED choice) is defined with a warning, which has no effect for choice symbols.
+NOTE: C:/esp/v6.1.1/esp-idf/components/bt/host/bluedroid/Kconfig.in:88: Choice symbol BT_ENC_KEY_SIZE_CTRL_NONE (member of BT_ENC_KEY_SIZE_CTRL_ENABLED choice) is defined with a warning, which has no effect for choice symbols.
+NOTE: C:/esp/v6.1.1/esp-idf/components/bt/host/nimble/Kconfig.in:1124: Deprecation notice: hex literal '0' without '0x' prefix detected. In the next major version, hex literals will be required to have a '0x' prefix.
+NOTE: C:/esp/v6.1.1/esp-idf/components/bt/controller/esp32c3/Kconfig.in:649: Deprecation notice: hex literal '0' without '0x' prefix detected. In the next major version, hex literals will be required to have a '0x' prefix.
+NOTE: C:/esp/v6.1.1/esp-idf/components/esp_hw_support\./lowpower/port/esp32p4/Kconfig.p4_rev3_mspi_workaround:6: Deprecation notice: hex literal '0' without '0x' prefix detected. In the next major version, hex literals will be required to have a '0x' prefix.
+NOTE: C:/esp/v6.1.1/esp-idf/components/esp_mm/Kconfig:20: Deprecation notice: hex literal '0' without '0x' prefix detected. In the next major version, hex literals will be required to have a '0x' prefix.
+
+NOTE: C:/esp/v6.1.1/esp-idf/components/openthread/Kconfig:106: Deprecation notice: hex literal '0' without '0x' prefix detected. In the next major version, hex literals will be required to have a '0x' prefix.
+
+[1015/1018] Building C object CMakeFiles/adhd_esp32_benchmark.elf.dir/project_elf_src_esp32c3.c.obj
+[1016/1018] Linking CXX executable adhd_esp32_benchmark.elf
+[1017/1018] Generating binary image from built executable
+esptool v5.6.0
+
+Creating ESP32-C3 image...
+
+Merged 3 ELF sections.
+
+Successfully created ESP32-C3 image.
+
+Generated <REPO>/build/esp32-k26/adhd_esp32_benchmark.bin
+[1018/1018] C:\WINDOWS\system32\cmd.exe /C "cd /D <REPO>\build\esp32-k26 && C:\Espressif\tools\python\v6.1.1\venv\Scripts\python.exe C:/esp/v6.1.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app <REPO>/build/esp32-k26/partition_table/partition-table.bin <REPO>/build/esp32-k26/adhd_esp32_benchmark.bin"
+adhd_esp32_benchmark.bin binary size 0x450a0 bytes. Smallest app partition is 0x100000 bytes. 0xbaf60 bytes (73%) free.
+
+Executing action: all (aliases: build)
+Running cmake in directory <REPO>\build\esp32-k26
+Executing "cmake -G Ninja -B <REPO>\build\esp32-k26 -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Espressif\tools\python\v6.1.1\venv\Scripts\python.exe -DESP_PLATFORM=1 -DIDF_TARGET=esp32c3 -DHDC_CLASSES=26 -DCCACHE_ENABLE=False <REPO>\bench\esp32"...
+Running ninja in directory <REPO>\build\esp32-k26
+Executing "ninja all"...
+
+
+Project build complete. To flash, run:
+ idf.py flash
+or
+ idf.py -p PORT flash
+or
+ python -m esptool --chip esp32c3 -b 460800 --before default-reset --after hard-reset write-flash --flash-mode dio --flash-size 2MB --flash-freq 80m 0x0 build\esp32-k26\bootloader\bootloader.bin 0x8000 build\esp32-k26\partition_table\partition-table.bin 0x10000 build\esp32-k26\adhd_esp32_benchmark.bin
+or from the "<REPO>\build\esp32-k26" directory
+ python -m esptool --chip esp32c3 -b 460800 --before default-reset --after hard-reset write-flash "@flash_args"
